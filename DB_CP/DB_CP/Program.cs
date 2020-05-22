@@ -20,6 +20,11 @@ namespace DB_CP
         {
             //string m = sha256_hash("omnfeoshi");
             //var z = m.Length;
+            var m = new Connector();
+            var l = m.Execute("insert into Eatery " +
+                "(eateryID, eateryName, eateryType)" +
+                "values (0, 'test', 2)");
+            m.CloseConnection();
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
