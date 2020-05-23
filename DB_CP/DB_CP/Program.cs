@@ -24,7 +24,7 @@ namespace DB_CP
             /*var l = m.Execute("insert into Eatery " +
                 "(eateryID, eateryName, eateryType)" +
                 "values (0, 'test', 2)");*/
-            var l = m.Execute("select * from Eatery");
+            var l = GetInfo.GetAllEatery(m);
             m.CloseConnection();
             /*
             Application.EnableVisualStyles();

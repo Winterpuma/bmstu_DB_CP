@@ -15,11 +15,11 @@ namespace AccessToDB
         
 
         /// <summary>
-        /// Создаем подключение к БД.
+        /// Создает подключение к БД.
         /// По умолчанию вход в БД через текущего пользователя windows
         /// </summary>
         /// <param name="connectionString">Строка подключения к БД</param>
-        public Connector(string connectionString = "Server=LAPTOP-HJHG4ROO\\HM;Database=DB_CW;Integrated Security=true;")
+        public Connector(string connectionString = "Server=LAPTOP-HJHG4ROO\\HM;Database=DB_CP;Integrated Security=true;")
         {
             connection = new SqlConnection(connectionString);
             connection.Open();
@@ -31,7 +31,7 @@ namespace AccessToDB
         /// </summary>
         /// <param name="cmdTxt">Текст команды</param>
         /// <returns>Список результатов(массив значений строк)</returns>
-        public List<object[]> Execute(string cmdTxt)
+        public List<object[]> ExecuteSelect(string cmdTxt)
         {
             List<object[]> res = new List<object[]>();
 

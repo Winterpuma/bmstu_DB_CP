@@ -1,6 +1,6 @@
 ﻿namespace DataStructures
 {
-    class User
+    public class User
     {
         int userID;
         string login;
@@ -21,8 +21,9 @@
         {
             userID = (int)data[0];
             login = (string)data[1];
-            if (data[2] != System.DBNull.Value)
-                permission = (int)data[2];
+            // data[2] по идее password
+            if (data[3] != System.DBNull.Value)
+                permission = (int)data[3];
         }
     }
 }

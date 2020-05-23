@@ -1,6 +1,6 @@
 ﻿namespace DataStructures
 {
-    class Meal
+    public class Meal
     {
         int mealID;
         string mealName;

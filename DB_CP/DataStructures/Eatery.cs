@@ -2,13 +2,13 @@
 {
     public class Eatery
     {
-        int eateryID;
+        string eateryID;
         string eateryName;
         string eateryType = "";
         string location = "";
         string description = "";
 
-        public Eatery(int id, string name, string type = "", string loc = "", string descr = "")
+        public Eatery(string id, string name, string type = "", string loc = "", string descr = "")
         {
             eateryID = id;
             eateryName = name;
@@ -23,14 +23,14 @@
         /// <param name="data">Массив значений</param>
         public Eatery(object[] data)
         {
-            eateryID = (int)data[0];
-            eateryName = (string)data[1];
+            eateryID = data[0].ToString();
+            eateryName = data[1].ToString().TrimEnd();
             if (data[2] != System.DBNull.Value)
-                eateryType = (string)data[2];
+                eateryType = data[2].ToString().TrimEnd();
             if (data[3] != System.DBNull.Value)
-               location = (string)data[3];
+               location = data[3].ToString().TrimEnd();
             if (data[4] != System.DBNull.Value)
-                description = (string)data[4];
+                description = data[4].ToString().TrimEnd();
         }
     }
 }
