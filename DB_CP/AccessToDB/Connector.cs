@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using DataStructures;
 
 namespace AccessToDB
 {
@@ -11,6 +13,7 @@ namespace AccessToDB
     {
         SqlConnection connection;
         
+
         /// <summary>
         /// Создаем подключение к БД.
         /// По умолчанию вход в БД через текущего пользователя windows
@@ -22,27 +25,32 @@ namespace AccessToDB
             connection.Open();
         }
 
+
         /// <summary>
-        /// Выполняет запрос возвращающий одно текстовое значение и возвращает результат 
+        /// Выполняет запрос возвращающий список результатов
         /// </summary>
         /// <param name="cmdTxt">Текст команды</param>
-        /// <returns>Результат выполнения запроса</returns>
-        public List<string> Execute(string cmdTxt)
+        /// <returns>Список результатов(массив значений строк)</returns>
+        public List<object[]> Execute(string cmdTxt)
         {
-            List<string> res = new List<string>();
+            List<object[]> res = new List<object[]>();
 
             using (var comand = new SqlCommand(cmdTxt, connection))
             {
                 var reader = comand.ExecuteReader();
-
-                while (reader.Read())
+                int nCol = reader.VisibleFieldCount; // количество столбцов
+                
+                while (reader.Read()) // получаем очередную строку результата
                 {
-                    res.Add(reader.GetString(0).ToString());
+                    object[] tmp = new object[nCol];
+                    reader.GetValues(tmp); // считать в tmp значения строк
+                    res.Add(tmp);
                 }
             }
             return res;
         }
-
+        
+        
         /// <summary>
         /// Закрывает соединение
         /// </summary>
