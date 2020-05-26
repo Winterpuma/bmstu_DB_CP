@@ -2,13 +2,13 @@
 {
     public class Meal
     {
-        int mealID;
+        string mealID;
         string mealName;
         string mealType = "";
         int kkal = -1;
         int cost = -1;
 
-        public Meal(int id, string name, string type = "", int kkal = -1, int cost = -1)
+        public Meal(string id, string name, string type = "", int kkal = -1, int cost = -1)
         {
             mealID = id;
             mealName = name;
@@ -23,7 +23,7 @@
         /// <param name="data">Массив значений</param>
         public Meal(object[] data)
         {
-            mealID = (int)data[0];
+            mealID = data[0].ToString();
             mealName = (string)data[1];
             if (data[2] != System.DBNull.Value)
                 mealType = (string)data[2];

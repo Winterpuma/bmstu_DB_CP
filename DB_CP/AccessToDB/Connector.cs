@@ -46,11 +46,27 @@ namespace AccessToDB
                     reader.GetValues(tmp); // считать в tmp значения строк
                     res.Add(tmp);
                 }
+                reader.Close();
             }
             return res;
         }
-        
-        
+
+
+        /// <summary>
+        /// Выполняет инструкцию
+        /// </summary>
+        /// <param name="cmdTxt">Текст команды</param>
+        public int ExecuteNonQuery(string cmdTxt)
+        {
+            int res = 0;
+            using (var comand = new SqlCommand(cmdTxt, connection))
+            {
+                res = comand.ExecuteNonQuery();
+            }
+            return res;
+        }
+
+
         /// <summary>
         /// Закрывает соединение
         /// </summary>

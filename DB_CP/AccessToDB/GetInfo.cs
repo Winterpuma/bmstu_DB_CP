@@ -22,6 +22,19 @@ namespace AccessToDB
             return res;
         }
 
+        public static List<Eatery> GetEateryWhere(Connector conn, string colName, string equalsTo)
+        {
+            List<Eatery> res = new List<Eatery>();
+
+            var tmp = conn.ExecuteSelect("select * from Eatery where " + colName + " = '" + equalsTo + "'");
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Eatery(i));
+            }
+
+            return res;
+        }
+
         public static List<Meal> GetAllMeals(Connector conn)
         {
             List<Meal> res = new List<Meal>();
@@ -39,7 +52,7 @@ namespace AccessToDB
         {
             List<User> res = new List<User>();
 
-            var tmp = conn.ExecuteSelect("select * from User");
+            var tmp = conn.ExecuteSelect("select * from MyUser");
             foreach (object[] i in tmp)
             {
                 res.Add(new User(i));

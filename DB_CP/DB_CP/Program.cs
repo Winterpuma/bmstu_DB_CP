@@ -18,14 +18,16 @@ namespace DB_CP
         [STAThread]
         static void Main()
         {
-            //string m = sha256_hash("omnfeoshi");
-            //var z = m.Length;
             var m = new Connector();
-            /*var l = m.Execute("insert into Eatery " +
-                "(eateryID, eateryName, eateryType)" +
-                "values (0, 'test', 2)");*/
-            var l = GetInfo.GetAllEatery(m);
+
+            //var test1 = GetInfo.GetAllEatery(m);
+            //var test2 = GetInfo.GetEateryWhere(m, "location", "ULK");
+
+            var test3 = InsertInfo.InsertUser(m, "test3", "12345");
+            var test4 = GetInfo.GetAllUsers(m);
+
             m.CloseConnection();
+
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
