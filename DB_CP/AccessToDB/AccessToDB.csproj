@@ -44,10 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckInfo.cs" />
     <Compile Include="GetInfo.cs" />
     <Compile Include="Connector.cs" />
     <Compile Include="InsertInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

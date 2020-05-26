@@ -61,5 +61,17 @@ namespace AccessToDB
             return res;
         }
 
+        public static User GetUserByLogin(Connector conn, string login, string pass)
+        {
+            var tmp = conn.ExecuteSelect(
+                "select * from MyUser " +
+                "where login = '" + login + "' and password = '" + pass + "'");
+            if (tmp.Count != 0)
+                return new User(tmp[0]);
+            else
+                return null;
+        }
+
+
     }
 }

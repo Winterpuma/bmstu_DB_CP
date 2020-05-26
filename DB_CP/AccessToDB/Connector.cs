@@ -74,14 +74,5 @@ namespace AccessToDB
         {
             connection.Close();
         }
-
-        /// <summary>
-        /// При удалении коннектора закрывается соединение
-        /// </summary>
-        ~Connector()
-        {
-            connection.Close();
-        }
-
     }
 }
