@@ -2,11 +2,11 @@
 {
     public class Eatery
     {
-        string eateryID;
-        string eateryName;
-        string eateryType = "";
-        string location = "";
-        string description = "";
+        public string eateryID;
+        public string eateryName { get; set; }
+        public string location { get; set; }
+        public string description { get; set; }
+        public string eateryType { get; set; }
 
         public Eatery(string id, string name, string type = "", string loc = "", string descr = "")
         {

@@ -2,11 +2,11 @@
 {
     public class Meal
     {
-        string mealID;
-        string mealName;
-        string mealType = "";
-        int kkal = -1;
-        int cost = -1;
+        public string mealID;
+        public string mealName { set; get; }
+        public string mealType { get; set; }
+        public int kkal { get; set; }
+        public int cost { get; set; }
 
         public Meal(string id, string name, string type = "", int kkal = -1, int cost = -1)
         {

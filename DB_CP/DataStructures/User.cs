@@ -2,9 +2,9 @@
 {
     public class User
     {
-        string userID;
-        string login;
-        int permission = -1;
+        public string userID;
+        public string login { get; set; }
+        public int permission = -1;
 
         public User(string id, string login, int permission = -1)
         {

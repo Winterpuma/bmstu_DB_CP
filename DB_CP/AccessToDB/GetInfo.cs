@@ -48,6 +48,21 @@ namespace AccessToDB
             return res;
         }
 
+        public static List<Meal> GetAllMealsOfEatery(Connector conn, string EateryID)
+        {
+            List<Meal> res = new List<Meal>();
+            
+            var tmp = conn.ExecuteSelect("select Meal.mealID, mealName, mealType, kkal, cost " +
+                "from(Menu join Meal on Menu.MealID = Meal.mealID) " +
+                "where eateryID = '" + EateryID + "'");
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Meal(i));
+            }
+
+            return res;
+        }
+
         public static List<User> GetAllUsers(Connector conn)
         {
             List<User> res = new List<User>();

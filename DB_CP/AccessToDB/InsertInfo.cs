@@ -21,5 +21,13 @@ namespace AccessToDB
                 "(userID, login, password, permission)" +
                 "values (NEWID(), '" + login + "', '" + password + "'," + permission.ToString() + ")");
         }
+
+        public static int InsertMeal(Connector conn)
+        {
+            /*insert into Meal
+            (mealID, mealName, kkal)
+values(NEWID(), 'MealTestHahaNullKKal', Null)*/
+            return 0;
+        }
     }
 }
