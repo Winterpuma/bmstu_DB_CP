@@ -37,25 +37,27 @@
             this.label_auth_pass = new System.Windows.Forms.Label();
             this.label_auth_login = new System.Windows.Forms.Label();
             this.panel_browseEatery = new System.Windows.Forms.Panel();
+            this.label_browseEateryDescription2 = new System.Windows.Forms.Label();
+            this.label_browseEateryDescription1 = new System.Windows.Forms.Label();
             this.label_browse_welcome = new System.Windows.Forms.Label();
             this.dataGridView_Eatery = new System.Windows.Forms.DataGridView();
-            this.eateryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_browse_username = new System.Windows.Forms.Label();
             this.panel_browseEateryMenu = new System.Windows.Forms.Panel();
             this.dataGridView_Meals = new System.Windows.Forms.DataGridView();
-            this.eateryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label_EateryMealsEateryInfo_type = new System.Windows.Forms.Label();
+            this.label_EateryMealsEateryInfo_name = new System.Windows.Forms.Label();
+            this.label_EateryMealsEateryInfo_description = new System.Windows.Forms.Label();
+            this.eateryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eateryBindingSource)).BeginInit();
             this.panel_browseEateryMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Meals)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eateryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_auth
@@ -125,6 +127,8 @@
             // 
             // panel_browseEatery
             // 
+            this.panel_browseEatery.Controls.Add(this.label_browseEateryDescription2);
+            this.panel_browseEatery.Controls.Add(this.label_browseEateryDescription1);
             this.panel_browseEatery.Controls.Add(this.label_browse_welcome);
             this.panel_browseEatery.Controls.Add(this.dataGridView_Eatery);
             this.panel_browseEatery.Controls.Add(this.label_browse_username);
@@ -133,27 +137,42 @@
             this.panel_browseEatery.Size = new System.Drawing.Size(630, 381);
             this.panel_browseEatery.TabIndex = 6;
             // 
+            // label_browseEateryDescription2
+            // 
+            this.label_browseEateryDescription2.AutoSize = true;
+            this.label_browseEateryDescription2.Location = new System.Drawing.Point(39, 145);
+            this.label_browseEateryDescription2.Name = "label_browseEateryDescription2";
+            this.label_browseEateryDescription2.Size = new System.Drawing.Size(415, 13);
+            this.label_browseEateryDescription2.TabIndex = 11;
+            this.label_browseEateryDescription2.Text = "Чтобы посмотреть меню конкретной столовой дважды нажмите на нужный ряд";
+            // 
+            // label_browseEateryDescription1
+            // 
+            this.label_browseEateryDescription1.AutoSize = true;
+            this.label_browseEateryDescription1.Location = new System.Drawing.Point(39, 111);
+            this.label_browseEateryDescription1.Name = "label_browseEateryDescription1";
+            this.label_browseEateryDescription1.Size = new System.Drawing.Size(284, 13);
+            this.label_browseEateryDescription1.TabIndex = 9;
+            this.label_browseEateryDescription1.Text = "Ниже представлен список  всех доступных столовых. ";
+            // 
             // label_browse_welcome
             // 
             this.label_browse_welcome.AutoSize = true;
-            this.label_browse_welcome.Location = new System.Drawing.Point(140, 48);
+            this.label_browse_welcome.Location = new System.Drawing.Point(48, 50);
             this.label_browse_welcome.Name = "label_browse_welcome";
-            this.label_browse_welcome.Size = new System.Drawing.Size(52, 13);
+            this.label_browse_welcome.Size = new System.Drawing.Size(104, 13);
             this.label_browse_welcome.TabIndex = 5;
-            this.label_browse_welcome.Text = "Welcome";
+            this.label_browse_welcome.Text = "Добро пожаловать";
             // 
             // dataGridView_Eatery
             // 
             this.dataGridView_Eatery.AutoGenerateColumns = false;
             this.dataGridView_Eatery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Eatery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.eateryType,
+            this.eateryName,
             this.location,
-            this.description,
-            this.eateryNameDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.eateryTypeDataGridViewTextBoxColumn});
+            this.eateryType,
+            this.description});
             this.dataGridView_Eatery.DataSource = this.eateryBindingSource;
             this.dataGridView_Eatery.Location = new System.Drawing.Point(28, 171);
             this.dataGridView_Eatery.Name = "dataGridView_Eatery";
@@ -161,12 +180,73 @@
             this.dataGridView_Eatery.TabIndex = 8;
             this.dataGridView_Eatery.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Eatery_CellDoubleClick);
             // 
-            // eateryType
+            // eateryBindingSource
             // 
-            this.eateryType.DataPropertyName = "eateryType";
-            this.eateryType.HeaderText = "eateryType";
-            this.eateryType.Name = "eateryType";
-            this.eateryType.ReadOnly = true;
+            this.eateryBindingSource.DataSource = typeof(DataStructures.Eatery);
+            // 
+            // label_browse_username
+            // 
+            this.label_browse_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_browse_username.AutoSize = true;
+            this.label_browse_username.Location = new System.Drawing.Point(511, 41);
+            this.label_browse_username.Name = "label_browse_username";
+            this.label_browse_username.Size = new System.Drawing.Size(29, 13);
+            this.label_browse_username.TabIndex = 0;
+            this.label_browse_username.Text = "login";
+            this.label_browse_username.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel_browseEateryMenu
+            // 
+            this.panel_browseEateryMenu.Controls.Add(this.label_EateryMealsEateryInfo_description);
+            this.panel_browseEateryMenu.Controls.Add(this.label_EateryMealsEateryInfo_name);
+            this.panel_browseEateryMenu.Controls.Add(this.label_EateryMealsEateryInfo_type);
+            this.panel_browseEateryMenu.Controls.Add(this.dataGridView_Meals);
+            this.panel_browseEateryMenu.Location = new System.Drawing.Point(648, 154);
+            this.panel_browseEateryMenu.Name = "panel_browseEateryMenu";
+            this.panel_browseEateryMenu.Size = new System.Drawing.Size(630, 381);
+            this.panel_browseEateryMenu.TabIndex = 8;
+            // 
+            // dataGridView_Meals
+            // 
+            this.dataGridView_Meals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Meals.Location = new System.Drawing.Point(37, 159);
+            this.dataGridView_Meals.Name = "dataGridView_Meals";
+            this.dataGridView_Meals.Size = new System.Drawing.Size(445, 159);
+            this.dataGridView_Meals.TabIndex = 9;
+            // 
+            // label_EateryMealsEateryInfo_type
+            // 
+            this.label_EateryMealsEateryInfo_type.AutoSize = true;
+            this.label_EateryMealsEateryInfo_type.Location = new System.Drawing.Point(34, 51);
+            this.label_EateryMealsEateryInfo_type.Name = "label_EateryMealsEateryInfo_type";
+            this.label_EateryMealsEateryInfo_type.Size = new System.Drawing.Size(80, 13);
+            this.label_EateryMealsEateryInfo_type.TabIndex = 10;
+            this.label_EateryMealsEateryInfo_type.Text = "type and where";
+            // 
+            // label_EateryMealsEateryInfo_name
+            // 
+            this.label_EateryMealsEateryInfo_name.AutoSize = true;
+            this.label_EateryMealsEateryInfo_name.Location = new System.Drawing.Point(34, 83);
+            this.label_EateryMealsEateryInfo_name.Name = "label_EateryMealsEateryInfo_name";
+            this.label_EateryMealsEateryInfo_name.Size = new System.Drawing.Size(33, 13);
+            this.label_EateryMealsEateryInfo_name.TabIndex = 11;
+            this.label_EateryMealsEateryInfo_name.Text = "name";
+            // 
+            // label_EateryMealsEateryInfo_description
+            // 
+            this.label_EateryMealsEateryInfo_description.AutoSize = true;
+            this.label_EateryMealsEateryInfo_description.Location = new System.Drawing.Point(34, 117);
+            this.label_EateryMealsEateryInfo_description.Name = "label_EateryMealsEateryInfo_description";
+            this.label_EateryMealsEateryInfo_description.Size = new System.Drawing.Size(58, 13);
+            this.label_EateryMealsEateryInfo_description.TabIndex = 12;
+            this.label_EateryMealsEateryInfo_description.Text = "description";
+            // 
+            // eateryName
+            // 
+            this.eateryName.DataPropertyName = "eateryName";
+            this.eateryName.HeaderText = "eateryName";
+            this.eateryName.Name = "eateryName";
+            this.eateryName.ReadOnly = true;
             // 
             // location
             // 
@@ -175,65 +255,19 @@
             this.location.Name = "location";
             this.location.ReadOnly = true;
             // 
+            // eateryType
+            // 
+            this.eateryType.DataPropertyName = "eateryType";
+            this.eateryType.HeaderText = "eateryType";
+            this.eateryType.Name = "eateryType";
+            this.eateryType.ReadOnly = true;
+            // 
             // description
             // 
             this.description.DataPropertyName = "description";
             this.description.HeaderText = "description";
             this.description.Name = "description";
             this.description.ReadOnly = true;
-            // 
-            // label_browse_username
-            // 
-            this.label_browse_username.AutoSize = true;
-            this.label_browse_username.Location = new System.Drawing.Point(568, 32);
-            this.label_browse_username.Name = "label_browse_username";
-            this.label_browse_username.Size = new System.Drawing.Size(29, 13);
-            this.label_browse_username.TabIndex = 0;
-            this.label_browse_username.Text = "login";
-            // 
-            // panel_browseEateryMenu
-            // 
-            this.panel_browseEateryMenu.Controls.Add(this.dataGridView_Meals);
-            this.panel_browseEateryMenu.Location = new System.Drawing.Point(645, 219);
-            this.panel_browseEateryMenu.Name = "panel_browseEateryMenu";
-            this.panel_browseEateryMenu.Size = new System.Drawing.Size(630, 381);
-            this.panel_browseEateryMenu.TabIndex = 8;
-            // 
-            // dataGridView_Meals
-            // 
-            this.dataGridView_Meals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Meals.Location = new System.Drawing.Point(51, 122);
-            this.dataGridView_Meals.Name = "dataGridView_Meals";
-            this.dataGridView_Meals.Size = new System.Drawing.Size(445, 159);
-            this.dataGridView_Meals.TabIndex = 9;
-            // 
-            // eateryNameDataGridViewTextBoxColumn
-            // 
-            this.eateryNameDataGridViewTextBoxColumn.DataPropertyName = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn.HeaderText = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn.Name = "eateryNameDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            // 
-            // eateryTypeDataGridViewTextBoxColumn
-            // 
-            this.eateryTypeDataGridViewTextBoxColumn.DataPropertyName = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn.HeaderText = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn.Name = "eateryTypeDataGridViewTextBoxColumn";
-            // 
-            // eateryBindingSource
-            // 
-            this.eateryBindingSource.DataSource = typeof(DataStructures.Eatery);
             // 
             // Form1
             // 
@@ -250,9 +284,10 @@
             this.panel_browseEatery.ResumeLayout(false);
             this.panel_browseEatery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).EndInit();
-            this.panel_browseEateryMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Meals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eateryBindingSource)).EndInit();
+            this.panel_browseEateryMenu.ResumeLayout(false);
+            this.panel_browseEateryMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Meals)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,15 +307,17 @@
         private System.Windows.Forms.DataGridView dataGridView_Eatery;
         private System.Windows.Forms.BindingSource eateryBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn eateryIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.Panel panel_browseEateryMenu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView_Meals;
+        private System.Windows.Forms.Label label_browseEateryDescription1;
+        private System.Windows.Forms.Label label_browseEateryDescription2;
+        private System.Windows.Forms.Label label_EateryMealsEateryInfo_type;
+        private System.Windows.Forms.Label label_EateryMealsEateryInfo_description;
+        private System.Windows.Forms.Label label_EateryMealsEateryInfo_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eateryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eateryType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
     }
 }
 

@@ -30,38 +30,7 @@ namespace DB_CP
             
             //Form1_Load();
         }
-
-        private void Form1_Load()
-        {
-            listView1.View = View.Details;
-            listView1.GridLines = true;
-            listView1.FullRowSelect = true;
-
-            //Add column header
-            listView1.Columns.Add("ProductName", 100);
-            listView1.Columns.Add("Price", 70);
-            listView1.Columns.Add("Quantity", 70);
-
-            //Add items in the listview
-            string[] arr = new string[4];
-            ListViewItem itm;
-
-            //Add first item
-            arr[0] = "product_1";
-            arr[1] = "100";
-            arr[2] = "10";
-            itm = new ListViewItem(arr);
-            listView1.Items.Add(itm);
-
-            //Add second item
-            arr[0] = "product_2";
-            arr[1] = "200";
-            arr[2] = "20";
-            itm = new ListViewItem(arr);
-            listView1.Items.Add(itm);
-
-            
-        }
+        
 
         private void button_auth_check_Click(object sender, EventArgs e)
         {
@@ -93,7 +62,7 @@ namespace DB_CP
         #region Страница со списком столовых
         private void LoadBrowseEateryPanel(string login)
         {
-            label_browse_username.Text = login;
+            label_browse_username.Text = "Имя пользователя:\n" + login;
             panel_browseEatery.BringToFront();
             currEateries = GetInfo.GetAllEatery(connectDB);
             foreach (Eatery eat in currEateries)
@@ -105,26 +74,26 @@ namespace DB_CP
         private void dataGridView_Eatery_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int ind = e.RowIndex;
-            LoadBrowseEateryMenuPanel(currEateries[ind].eateryID);
+            LoadBrowseEateryMenuPanel(currEateries[ind]);
         }
         #endregion
 
-        private void LoadBrowseEateryMenuPanel(string eateryID)
+        private void LoadBrowseEateryMenuPanel(Eatery eatery)
         {
             /*currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eateryID);
             foreach (Meal m in currMenu)
             {
                 //mealBindingSource.Add(m);
             }*/
-            MDA(eateryID);
+            MDA(eatery);
             panel_browseEateryMenu.BringToFront();
         }
 
-        private void MDA(string EateryID)
+        private void MDA(Eatery eatery)
         {
             string sqlCommand = "select Meal.mealID, mealName, mealType, kkal, cost " +
                 "from Menu join Meal on Menu.MealID = Meal.mealID " +
-                "where eateryID = '" + EateryID + "'";
+                "where eateryID = '" + eatery.eateryID + "'";
             string connectionString = "Server=LAPTOP-HJHG4ROO\\HM;Database=DB_CP;Integrated Security=true;";
             var connection = new SqlConnection(connectionString);
 
@@ -136,6 +105,10 @@ namespace DB_CP
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             adapter.Fill(table);
             dataGridView_Meals.DataSource = table;
+
+            label_EateryMealsEateryInfo_type.Text = eatery.eateryType + " в " + eatery.location;
+            label_EateryMealsEateryInfo_name.Text = eatery.eateryName;
+            label_EateryMealsEateryInfo_description.Text = eatery.description;
         }
     }
 }
