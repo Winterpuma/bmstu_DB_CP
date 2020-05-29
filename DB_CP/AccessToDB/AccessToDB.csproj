@@ -52,6 +52,7 @@
     <Compile Include="UpdateInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AccessToDB_ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

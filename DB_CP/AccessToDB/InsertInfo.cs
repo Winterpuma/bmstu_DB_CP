@@ -8,26 +8,39 @@ namespace AccessToDB
 {
     public static class InsertInfo
     {
-        public static int InsertUser(Connector conn, string login, string password)
+        public static int InsertUser(Connector conn, string login, string password, string permission = "NULL")
         {
-            return conn.ExecuteNonQuery("insert into MyUser " +
-                "(userID, login, password)" +
-                "values (NEWID(), '" + login + "', '" + password + "')");
+            return conn.ExecuteNonQuery(
+                "insert into MyUser " +
+                "(userID, login, password, permission) " +
+                "values (NEWID(), '" + login + "', '" + password + "'," + permission + ")");
         }
 
-        public static int InsertUser(Connector conn, string login, string password, int permission)
+
+        public static int InsertMeal(Connector conn, string name, string type = "NULL", string kkal = "NULL", string cost = "NULL")
         {
-            return conn.ExecuteNonQuery("insert into MyUser " +
-                "(userID, login, password, permission)" +
-                "values (NEWID(), '" + login + "', '" + password + "'," + permission.ToString() + ")");
+            return conn.ExecuteNonQuery(
+                "insert into Meal" +
+                "(mealID, mealName, mealType, kkal, cost) " +
+                "values(NEWID(), '" + name + "', '" + type + "', " + kkal + ", " + cost + ")");
+        }
+        
+
+        public static int InsertMenu(Connector conn, string eateryID, string mealID, string day = "NULL", string amount = "NULL")
+        {
+            return conn.ExecuteNonQuery(
+                "insert into Menu " +
+                "(eateryID, mealID, day, amount, state) " +
+                "values('" + eateryID + "', '" + mealID + "', " + day + ", " + amount + "'Нет в наличии')");
         }
 
-        public static int InsertMeal(Connector conn)
+
+        public static int InsertMealChoosen(Connector conn, string userID, string mealID)
         {
-            /*insert into Meal
-            (mealID, mealName, kkal)
-values(NEWID(), 'MealTestHahaNullKKal', Null)*/
-            return 0;
+            return conn.ExecuteNonQuery(
+                "insert into ChoosenMeals " +
+                "(userID, mealID) " +
+                "values('" + userID + "', '" + mealID + "')");
         }
     }
 }
