@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DB_CP.Form1">
+    <Position X="5.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="button_auth_check" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView_Eatery" Hidden="true" />
+      <Field Name="dataGridView_Meals" Hidden="true" />
+      <Field Name="description" Hidden="true" />
+      <Field Name="eateryBindingSource" Hidden="true" />
+      <Field Name="eateryIDDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="eateryName" Hidden="true" />
+      <Field Name="eateryType" Hidden="true" />
+      <Field Name="label_auth_login" Hidden="true" />
+      <Field Name="label_auth_pass" Hidden="true" />
+      <Field Name="label_auth_res" Hidden="true" />
+      <Field Name="label_browse_username" Hidden="true" />
+      <Field Name="label_browse_welcome" Hidden="true" />
+      <Field Name="label_browseEateryDescription1" Hidden="true" />
+      <Field Name="label_browseEateryDescription2" Hidden="true" />
+      <Field Name="label_EateryMealsEateryInfo_description" Hidden="true" />
+      <Field Name="label_EateryMealsEateryInfo_name" Hidden="true" />
+      <Field Name="label_EateryMealsEateryInfo_type" Hidden="true" />
+      <Field Name="location" Hidden="true" />
+      <Method Name="MDA" Hidden="true" />
+      <Field Name="panel_auth" Hidden="true" />
+      <Field Name="panel_browseEatery" Hidden="true" />
+      <Field Name="panel_browseEateryMenu" Hidden="true" />
+      <Field Name="textBox_auth_login" Hidden="true" />
+      <Field Name="textBox_auth_pass" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQEAABABCCAEEgAKACAAhQCMIJC4ECBAABAAAAACAQ=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DB_CP.Program">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="sha256_hash" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

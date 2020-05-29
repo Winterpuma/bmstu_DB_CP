@@ -32,10 +32,14 @@ namespace DB_CP
         }
         
 
+        /// <summary>
+        /// Вызывается при нажатии на кнопку авторизации
+        /// </summary>
         private void button_auth_check_Click(object sender, EventArgs e)
         {
             string login = textBox_auth_login.Text;
             string pass = textBox_auth_pass.Text;
+            textBox_auth_pass.Text = ""; // сброс пароля
 
             bool taken = CheckInfo.IsLoginTaken(connectDB, login);
             if (taken)
