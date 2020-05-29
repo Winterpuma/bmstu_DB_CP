@@ -18,6 +18,7 @@ namespace DB_CP
     public partial class Form1 : Form
     {
         Connector connectDB = new Connector();
+        User currentUser = null;
         List<Eatery> currEateries = null;
         List<Meal> currMenu = null;
         
@@ -25,12 +26,10 @@ namespace DB_CP
         {
             InitializeComponent();
             panel_auth.BringToFront();
-            //CreateMyListView();
-            //listView1.Columns.Add("ProductName", 100);
             
-            //Form1_Load();
         }
-        
+
+        #region Авторизация
 
         /// <summary>
         /// Вызывается при нажатии на кнопку авторизации
@@ -38,40 +37,82 @@ namespace DB_CP
         private void button_auth_check_Click(object sender, EventArgs e)
         {
             string login = textBox_auth_login.Text;
-            string pass = textBox_auth_pass.Text;
+            string pass = Program.sha256_hash(textBox_auth_pass.Text);
             textBox_auth_pass.Text = ""; // сброс пароля
 
             bool taken = CheckInfo.IsLoginTaken(connectDB, login);
             if (taken)
             {
-                User u = GetInfo.GetUserByLogin(connectDB, login, pass);
-                if (u == null)
+                currentUser = GetInfo.GetUserByLogin(connectDB, login, pass);
+                if (currentUser == null)
                 {
-                    label_auth_res.Text = "Wrong password";
+                    label_auth_res.Text = "Неправильный пароль";
                     label_auth_res.Visible = true;
                 }
                 else
                 {
                     label_auth_res.Visible = false;
-                    LoadBrowseEateryPanel(u.login);
+                    LoadBrowseEateryPanel();
                 }
             }
             else
             {
-                label_auth_res.Text = "No such login";
+                label_auth_res.Text = "Такого пользователя не существует";
                 label_auth_res.Visible = true;
             }
         }
 
-        #region Страница со списком столовых
-        private void LoadBrowseEateryPanel(string login)
+        private void button_auth_newUser_Click(object sender, EventArgs e)
         {
-            label_browse_username.Text = "Имя пользователя:\n" + login;
+            textBox_auth_pass.Text = "";
+            label_auth_res.Visible = false;
+            panel_newUser.BringToFront();
+        }
+
+        private void button_newUser_register_Click(object sender, EventArgs e)
+        {
+            if (CheckInfo.IsLoginTaken(connectDB, textBox_newUser_login.Text))
+            {
+                label_newUser_result.Text = "Такой логин занят";
+                label_newUser_result.Visible = true;
+            }
+            else if (textBox_newUser_pass.Text != textBox_newUser_pass2.Text)
+            {
+                label_newUser_result.Text = "Пароли не совпадают";
+                label_newUser_result.Visible = true;
+            }
+            else
+            {
+                label_newUser_result.Visible = false;
+                var login = textBox_newUser_login.Text;
+                var pass = Program.sha256_hash(textBox_newUser_pass.Text);
+                InsertInfo.InsertUser(connectDB, login, pass);
+                currentUser = GetInfo.GetUserByLogin(connectDB, login, pass);
+                LoadBrowseEateryPanel();
+            }
+        }
+
+        private void button_newUser_return_Click(object sender, EventArgs e)
+        {
+            label_newUser_result.Text = "";
+            label_newUser_result.Visible = false;
+            textBox_newUser_login.Text = "";
+            textBox_newUser_pass.Text = "";
+            textBox_newUser_pass2.Text = "";
+            panel_auth.BringToFront();
+        }
+
+        #endregion
+
+        #region Страница со списком столовых
+        private void LoadBrowseEateryPanel()
+        {
+            label_browse_username.Text = "Имя пользователя:\n" + currentUser.login;
             panel_browseEatery.BringToFront();
             currEateries = GetInfo.GetAllEatery(connectDB);
             foreach (Eatery eat in currEateries)
             {
-                eateryBindingSource.Add(eat);
+                myBindingSource.Add(eat);
             }
         }
 
@@ -84,13 +125,12 @@ namespace DB_CP
 
         private void LoadBrowseEateryMenuPanel(Eatery eatery)
         {
-            /*currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eateryID);
+            bindingSource1.Clear();
+            currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eatery.eateryID);
             foreach (Meal m in currMenu)
             {
-                //mealBindingSource.Add(m);
-            }*/
-            MDA(eatery);
-            panel_browseEateryMenu.BringToFront();
+                bindingSource1.Add(m);
+            }
         }
 
         private void MDA(Eatery eatery)
@@ -109,10 +149,8 @@ namespace DB_CP
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             adapter.Fill(table);
             dataGridView_Meals.DataSource = table;
-
-            label_EateryMealsEateryInfo_type.Text = eatery.eateryType + " в " + eatery.location;
-            label_EateryMealsEateryInfo_name.Text = eatery.eateryName;
-            label_EateryMealsEateryInfo_description.Text = eatery.description;
         }
+
+        
     }
 }
