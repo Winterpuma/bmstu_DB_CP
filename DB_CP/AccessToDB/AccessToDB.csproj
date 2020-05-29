@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckInfo.cs" />
+    <Compile Include="DeleteInfo.cs" />
     <Compile Include="GetInfo.cs" />
     <Compile Include="Connector.cs" />
     <Compile Include="InsertInfo.cs" />

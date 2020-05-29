@@ -27,7 +27,10 @@ namespace DB_CP
             //var test4 = GetInfo.GetAllUsers(m);
 
             //var test5 = InsertInfo.InsertMeal(m, "РусскиеВперед", "studio", "123", "300");
-            var test6 = InsertInfo.InsertMealChoosen(m, "2DAC6B57-37B3-4341-B06A-90D1460DE38D", "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
+            //var test6 = InsertInfo.InsertMealChoosen(m, "2DAC6B57-37B3-4341-B06A-90D1460DE38D", "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
+
+            //var test7 = DeleteInfo.DeleteMealChoosen(m, "2DAC6B57-37B3-4341-B06A-90D1460DE38D", "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
+            //var test8 = DeleteInfo.DeleteUserByID(m, "FAA21E51-2750-40F6-954F-BD36E81D82AB");
             m.CloseConnection();
 
             /*
