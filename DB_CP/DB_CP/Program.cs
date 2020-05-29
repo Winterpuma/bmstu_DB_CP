@@ -18,7 +18,7 @@ namespace DB_CP
         [STAThread]
         static void Main()
         {
-            var m = new Connector();
+            //var m = new Connector();
 
             //var test1 = GetInfo.GetAllEatery(m);
             //var test2 = GetInfo.GetEateryWhere(m, "location", "ULK");
@@ -31,12 +31,15 @@ namespace DB_CP
 
             //var test7 = DeleteInfo.DeleteMealChoosen(m, "2DAC6B57-37B3-4341-B06A-90D1460DE38D", "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
             //var test8 = DeleteInfo.DeleteUserByID(m, "FAA21E51-2750-40F6-954F-BD36E81D82AB");
-            m.CloseConnection();
 
-            /*
+            //var test9 = GetInfo.GetEateryWhereMealIsAvailable(m, "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
+            //var test10 = UpdateInfo.UpdateMenu(m, "26EAAB16-5CC5-4405-92FC-386987A77B9C", "C526755E-FF20-41A0-AB20-B229013E060F", "В наличии", "19");
+
+            //m.CloseConnection();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());*/
+            Application.Run(new Form1());
         }
 
         public static String sha256_hash(string value)

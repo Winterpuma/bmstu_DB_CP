@@ -35,6 +35,22 @@ namespace AccessToDB
             return res;
         }
 
+        public static List<Eatery> GetEateryWhereMealIsAvailable(Connector conn, string mealID)
+        {
+            List<Eatery> res = new List<Eatery>();
+
+            var tmp = conn.ExecuteSelect(
+                "select Eatery.eateryID, eateryName, eateryType, location, description " +
+                "from(Eatery join Menu on Menu.EateryID = Eatery.EateryID) " +
+                "where mealID = '" + mealID + "' and state = 'В наличии'");
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Eatery(i));
+            }
+
+            return res;
+        }
+
         public static List<Meal> GetAllMeals(Connector conn)
         {
             List<Meal> res = new List<Meal>();
@@ -48,13 +64,43 @@ namespace AccessToDB
             return res;
         }
 
-        public static List<Meal> GetAllMealsOfEatery(Connector conn, string EateryID)
+        public static List<Meal> GetAllMealsOfEatery(Connector conn, string eateryID)
         {
             List<Meal> res = new List<Meal>();
             
             var tmp = conn.ExecuteSelect("select Meal.mealID, mealName, mealType, kkal, cost " +
                 "from(Menu join Meal on Menu.MealID = Meal.mealID) " +
-                "where eateryID = '" + EateryID + "'");
+                "where eateryID = '" + eateryID + "'");
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Meal(i));
+            }
+
+            return res;
+        }
+
+        public static List<Meal> GetAllMealsEateryByDay(Connector conn, string eateryID, string day)
+        {
+            List<Meal> res = new List<Meal>();
+
+            var tmp = conn.ExecuteSelect("select Meal.mealID, mealName, mealType, kkal, cost " +
+                "from(Menu join Meal on Menu.MealID = Meal.mealID) " +
+                "where eateryID = '" + eateryID + "' and day = " + day);
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Meal(i));
+            }
+
+            return res;
+        }
+
+        public static List<Meal> GetChoosenMeals(Connector conn, string userID)
+        {
+            List<Meal> res = new List<Meal>();
+
+            var tmp = conn.ExecuteSelect("select Meal.mealID, mealName, mealType, kkal, cost " +
+                "from(ChoosenMeals join Meal on ChoosenMeals.MealID = Meal.mealID) " +
+                "where userID = '" + userID + "'");
             foreach (object[] i in tmp)
             {
                 res.Add(new Meal(i));
