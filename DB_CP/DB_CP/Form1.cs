@@ -107,6 +107,8 @@ namespace DB_CP
         #region Страница со списком столовых
         private void LoadBrowseEateryPanel()
         {
+            bindingSource1.Clear();
+            myBindingSource.Clear();
             label_browse_username.Text = "Имя пользователя:\n" + currentUser.login;
             panel_browseEatery.BringToFront();
             currEateries = GetInfo.GetAllEatery(connectDB);
@@ -128,9 +130,7 @@ namespace DB_CP
             bindingSource1.Clear();
             currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eatery.eateryID);
             foreach (Meal m in currMenu)
-            {
                 bindingSource1.Add(m);
-            }
         }
 
         private void MDA(Eatery eatery)
@@ -151,6 +151,57 @@ namespace DB_CP
             dataGridView_Meals.DataSource = table;
         }
 
-        
+        private void button_browseEatery_filter_Click(object sender, EventArgs e)
+        {
+            string colName = comboBox_browseEatery.Text;
+            string val = textBox_browseEatery_value.Text;
+            bindingSource1.Clear(); // очистить блюда
+            myBindingSource.Clear(); // очистить питальни
+            currEateries = GetInfo.GetEateryWhere(connectDB, colName, val);
+            foreach (Eatery eat in currEateries)
+                myBindingSource.Add(eat);
+        }
+
+        private void dataGridView_Meals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ind = e.RowIndex;
+            Meal m = currMenu[ind];
+            InsertInfo.InsertMealChoosen(connectDB, currentUser.userID, m.mealID);
+            label_browseEatery_insertInfo.Text = "В личный список добавлено блюдо.";
+        }
+
+        private void button_browseEatery_Click(object sender, EventArgs e)
+        {
+            label_browseEatery_insertInfo.Text = "";
+            myBindingSource.Clear();
+            bindingSource1.Clear();
+            currMenu = GetInfo.GetChoosenMeals(connectDB, currentUser.userID);
+            foreach (Meal m in currMenu)
+                bindingSource1.Add(m);
+            label_choosenMeals_login.Text = "Имя пользователя:\n" + currentUser.login;
+            panel_choosenMeals.BringToFront();
+        }
+
+        private void dataGridView_choosenMeals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ind = e.RowIndex;
+            DeleteInfo.DeleteMealChoosen(connectDB, currentUser.userID, currMenu[ind].mealID);
+            bindingSource1.RemoveAt(ind);
+            currMenu.RemoveAt(ind);
+        }
+
+        private void button_choosenMeals_Click(object sender, EventArgs e)
+        {
+            LoadBrowseEateryPanel();
+            panel_browseEatery.BringToFront();
+        }
+
+        private void dataGridView_choosenMeals_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ind = e.RowIndex;
+            currEateries = GetInfo.GetEateryWhereMealIsAvailable(connectDB, currMenu[ind].mealID);
+            foreach (Eatery eat in currEateries)
+                myBindingSource.Add(eat);
+        }
     }
 }
