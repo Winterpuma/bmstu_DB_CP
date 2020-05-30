@@ -54,11 +54,21 @@
             this.mealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kkal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kkalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_Eatery = new System.Windows.Forms.DataGridView();
             this.eateryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eateryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_browse_username = new System.Windows.Forms.Label();
             this.panel_newUser = new System.Windows.Forms.Panel();
             this.button_newUser_return = new System.Windows.Forms.Button();
@@ -82,75 +92,65 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView_EatWhereMealIsAvail = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_forAdmin = new System.Windows.Forms.Button();
-            this.button_dislogin = new System.Windows.Forms.Button();
-            this.button_ruler = new System.Windows.Forms.Button();
-            this.panel_admin = new System.Windows.Forms.Panel();
-            this.button_admin_back = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView_usersForAdmin = new System.Windows.Forms.DataGridView();
-            this.perms = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.u = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.r = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel_ruler = new System.Windows.Forms.Panel();
-            this.dataGridView_ruler_menu = new System.Windows.Forms.DataGridView();
-            this.label_ruler_info = new System.Windows.Forms.Label();
-            this.button_ruler_goBack = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView_eateryRuler = new System.Windows.Forms.DataGridView();
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eateryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kkalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_forAdmin = new System.Windows.Forms.Button();
+            this.button_dislogin = new System.Windows.Forms.Button();
+            this.button_ruler = new System.Windows.Forms.Button();
+            this.panel_admin = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button_admin_back = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView_usersForAdmin = new System.Windows.Forms.DataGridView();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perms = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.u = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel_ruler = new System.Windows.Forms.Panel();
+            this.dataGridView_ruler_menu = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label_ruler_info = new System.Windows.Forms.Label();
+            this.button_ruler_goBack = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView_eateryRuler = new System.Windows.Forms.DataGridView();
+            this.eateryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Meals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myBindingSource)).BeginInit();
             this.panel_newUser.SuspendLayout();
             this.panel_choosenMeals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_choosenMeals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EatWhereMealIsAvail)).BeginInit();
             this.panel_admin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usersForAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.panel_ruler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ruler_menu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_auth
@@ -331,9 +331,9 @@
             this.label_browseEateryDescription2.AutoSize = true;
             this.label_browseEateryDescription2.Location = new System.Drawing.Point(39, 145);
             this.label_browseEateryDescription2.Name = "label_browseEateryDescription2";
-            this.label_browseEateryDescription2.Size = new System.Drawing.Size(415, 13);
+            this.label_browseEateryDescription2.Size = new System.Drawing.Size(372, 13);
             this.label_browseEateryDescription2.TabIndex = 11;
-            this.label_browseEateryDescription2.Text = "Чтобы посмотреть меню конкретной столовой дважды нажмите на нужный ряд";
+            this.label_browseEateryDescription2.Text = "Чтобы посмотреть меню конкретной столовой нажмите на нужный ряд";
             // 
             // label_browseEateryDescription1
             // 
@@ -401,6 +401,34 @@
             this.cost.Name = "cost";
             this.cost.ReadOnly = true;
             // 
+            // mealNameDataGridViewTextBoxColumn
+            // 
+            this.mealNameDataGridViewTextBoxColumn.DataPropertyName = "mealName";
+            this.mealNameDataGridViewTextBoxColumn.HeaderText = "mealName";
+            this.mealNameDataGridViewTextBoxColumn.Name = "mealNameDataGridViewTextBoxColumn";
+            // 
+            // mealTypeDataGridViewTextBoxColumn
+            // 
+            this.mealTypeDataGridViewTextBoxColumn.DataPropertyName = "mealType";
+            this.mealTypeDataGridViewTextBoxColumn.HeaderText = "mealType";
+            this.mealTypeDataGridViewTextBoxColumn.Name = "mealTypeDataGridViewTextBoxColumn";
+            // 
+            // kkalDataGridViewTextBoxColumn
+            // 
+            this.kkalDataGridViewTextBoxColumn.DataPropertyName = "kkal";
+            this.kkalDataGridViewTextBoxColumn.HeaderText = "kkal";
+            this.kkalDataGridViewTextBoxColumn.Name = "kkalDataGridViewTextBoxColumn";
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(DataStructures.Meal);
+            // 
             // dataGridView_Eatery
             // 
             this.dataGridView_Eatery.AutoGenerateColumns = false;
@@ -419,7 +447,7 @@
             this.dataGridView_Eatery.Name = "dataGridView_Eatery";
             this.dataGridView_Eatery.Size = new System.Drawing.Size(445, 159);
             this.dataGridView_Eatery.TabIndex = 8;
-            this.dataGridView_Eatery.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Eatery_CellDoubleClick);
+            this.dataGridView_Eatery.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Eatery_CellDoubleClick);
             // 
             // eateryName
             // 
@@ -448,6 +476,34 @@
             this.description.HeaderText = "description";
             this.description.Name = "description";
             this.description.ReadOnly = true;
+            // 
+            // eateryNameDataGridViewTextBoxColumn
+            // 
+            this.eateryNameDataGridViewTextBoxColumn.DataPropertyName = "eateryName";
+            this.eateryNameDataGridViewTextBoxColumn.HeaderText = "eateryName";
+            this.eateryNameDataGridViewTextBoxColumn.Name = "eateryNameDataGridViewTextBoxColumn";
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // eateryTypeDataGridViewTextBoxColumn
+            // 
+            this.eateryTypeDataGridViewTextBoxColumn.DataPropertyName = "eateryType";
+            this.eateryTypeDataGridViewTextBoxColumn.HeaderText = "eateryType";
+            this.eateryTypeDataGridViewTextBoxColumn.Name = "eateryTypeDataGridViewTextBoxColumn";
+            // 
+            // myBindingSource
+            // 
+            this.myBindingSource.DataSource = typeof(DataStructures.Eatery);
             // 
             // label_browse_username
             // 
@@ -676,6 +732,30 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "mealName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "mealName";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "mealType";
+            this.dataGridViewTextBoxColumn6.HeaderText = "mealType";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "kkal";
+            this.dataGridViewTextBoxColumn7.HeaderText = "kkal";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "cost";
+            this.dataGridViewTextBoxColumn8.HeaderText = "cost";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // dataGridView_EatWhereMealIsAvail
             // 
             this.dataGridView_EatWhereMealIsAvail.AutoGenerateColumns = false;
@@ -723,6 +803,30 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "eateryName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "eateryName";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "location";
+            this.dataGridViewTextBoxColumn14.HeaderText = "location";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "description";
+            this.dataGridViewTextBoxColumn15.HeaderText = "description";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "eateryType";
+            this.dataGridViewTextBoxColumn16.HeaderText = "eateryType";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
             // button_forAdmin
             // 
             this.button_forAdmin.Location = new System.Drawing.Point(1015, 207);
@@ -767,6 +871,15 @@
             this.panel_admin.Size = new System.Drawing.Size(978, 381);
             this.panel_admin.TabIndex = 20;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(124, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(221, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Страница изменения прав пользователей";
+            // 
             // button_admin_back
             // 
             this.button_admin_back.Location = new System.Drawing.Point(39, 30);
@@ -802,6 +915,12 @@
             this.dataGridView_usersForAdmin.TabIndex = 9;
             this.dataGridView_usersForAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_usersForAdmin_CellDoubleClick);
             // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            // 
             // perms
             // 
             this.perms.DataPropertyName = "perms";
@@ -830,6 +949,10 @@
             this.a.ReadOnly = true;
             this.a.Width = 20;
             // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataSource = typeof(DataStructures.User);
+            // 
             // panel_ruler
             // 
             this.panel_ruler.Controls.Add(this.dataGridView_ruler_menu);
@@ -856,6 +979,34 @@
             this.dataGridView_ruler_menu.Name = "dataGridView_ruler_menu";
             this.dataGridView_ruler_menu.Size = new System.Drawing.Size(458, 222);
             this.dataGridView_ruler_menu.TabIndex = 20;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "mealName";
+            this.dataGridViewTextBoxColumn18.HeaderText = "mealName";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dayDataGridViewTextBoxColumn
+            // 
+            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
+            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
+            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataSource = typeof(DataStructures.Menu);
             // 
             // label_ruler_info
             // 
@@ -900,10 +1051,6 @@
             this.dataGridView_eateryRuler.TabIndex = 9;
             this.dataGridView_eateryRuler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_eateryRuler_CellClick);
             // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataSource = typeof(DataStructures.Menu);
-            // 
             // eateryNameDataGridViewTextBoxColumn1
             // 
             this.eateryNameDataGridViewTextBoxColumn1.DataPropertyName = "eateryName";
@@ -928,153 +1075,6 @@
             this.eateryTypeDataGridViewTextBoxColumn1.HeaderText = "eateryType";
             this.eateryTypeDataGridViewTextBoxColumn1.Name = "eateryTypeDataGridViewTextBoxColumn1";
             // 
-            // myBindingSource
-            // 
-            this.myBindingSource.DataSource = typeof(DataStructures.Eatery);
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(DataStructures.User);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "mealName";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "mealType";
-            this.dataGridViewTextBoxColumn6.HeaderText = "mealType";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "kkal";
-            this.dataGridViewTextBoxColumn7.HeaderText = "kkal";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "cost";
-            this.dataGridViewTextBoxColumn8.HeaderText = "cost";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(DataStructures.Meal);
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "eateryName";
-            this.dataGridViewTextBoxColumn13.HeaderText = "eateryName";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "location";
-            this.dataGridViewTextBoxColumn14.HeaderText = "location";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "description";
-            this.dataGridViewTextBoxColumn15.HeaderText = "description";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "eateryType";
-            this.dataGridViewTextBoxColumn16.HeaderText = "eateryType";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // mealNameDataGridViewTextBoxColumn
-            // 
-            this.mealNameDataGridViewTextBoxColumn.DataPropertyName = "mealName";
-            this.mealNameDataGridViewTextBoxColumn.HeaderText = "mealName";
-            this.mealNameDataGridViewTextBoxColumn.Name = "mealNameDataGridViewTextBoxColumn";
-            // 
-            // mealTypeDataGridViewTextBoxColumn
-            // 
-            this.mealTypeDataGridViewTextBoxColumn.DataPropertyName = "mealType";
-            this.mealTypeDataGridViewTextBoxColumn.HeaderText = "mealType";
-            this.mealTypeDataGridViewTextBoxColumn.Name = "mealTypeDataGridViewTextBoxColumn";
-            // 
-            // kkalDataGridViewTextBoxColumn
-            // 
-            this.kkalDataGridViewTextBoxColumn.DataPropertyName = "kkal";
-            this.kkalDataGridViewTextBoxColumn.HeaderText = "kkal";
-            this.kkalDataGridViewTextBoxColumn.Name = "kkalDataGridViewTextBoxColumn";
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            // 
-            // eateryNameDataGridViewTextBoxColumn
-            // 
-            this.eateryNameDataGridViewTextBoxColumn.DataPropertyName = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn.HeaderText = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn.Name = "eateryNameDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            // 
-            // eateryTypeDataGridViewTextBoxColumn
-            // 
-            this.eateryTypeDataGridViewTextBoxColumn.DataPropertyName = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn.HeaderText = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn.Name = "eateryTypeDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn18.HeaderText = "mealName";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Страница изменения прав пользователей";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1097,7 +1097,9 @@
             this.panel_browseEatery.ResumeLayout(false);
             this.panel_browseEatery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Meals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myBindingSource)).EndInit();
             this.panel_newUser.ResumeLayout(false);
             this.panel_newUser.PerformLayout();
             this.panel_choosenMeals.ResumeLayout(false);
@@ -1107,14 +1109,12 @@
             this.panel_admin.ResumeLayout(false);
             this.panel_admin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usersForAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.panel_ruler.ResumeLayout(false);
             this.panel_ruler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ruler_menu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

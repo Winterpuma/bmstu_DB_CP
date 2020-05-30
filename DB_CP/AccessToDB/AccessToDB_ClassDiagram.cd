@@ -15,23 +15,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AccessToDB.GetInfo">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="3.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAADAAACAAAAAAQAEAAAA=</HashCode>
+      <HashCode>AAAAAAgAAQAABAkAAAAAAAAAADAAACAAAAAAQAEAAAA=</HashCode>
       <FileName>GetInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AccessToDB.InsertInfo">
-    <Position X="5.5" Y="0.5" Width="1.75" />
+    <Position X="5.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACBEAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InsertInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AccessToDB.UpdateInfo">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="9.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>UpdateInfo.cs</FileName>
     </TypeIdentifier>
   </Class>

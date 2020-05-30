@@ -17,8 +17,15 @@
   <Class Name="DataStructures.User">
     <Position X="5.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAIAAIAAAAAAAEAA=</HashCode>
       <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataStructures.Menu">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAABAAAAAAAAAAAAAAACgAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

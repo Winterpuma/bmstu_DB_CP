@@ -92,6 +92,7 @@ namespace DB_CP
                 var pass = Program.sha256_hash(textBox_newUser_pass.Text);
                 InsertInfo.InsertUser(connectDB, login, pass);
                 currentUser = GetInfo.GetUserByLogin(connectDB, login, pass);
+                button_dislogin.Visible = true;
                 LoadBrowseEateryPanel();
             }
         }
@@ -231,6 +232,7 @@ namespace DB_CP
 
         private void dataGridView_choosenMeals_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            myBindingSource.Clear();
             int ind = e.RowIndex;
             currEateries = GetInfo.GetEateryWhereMealIsAvailable(connectDB, currMenu[ind].mealID);
             foreach (Eatery eat in currEateries)
