@@ -82,6 +82,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\DataStructures.Meal.datasource" />
+    <None Include="Properties\DataSources\DataStructures.Menu.datasource" />
     <None Include="Properties\DataSources\DataStructures.User.datasource" />
     <None Include="UI_ClassDiagram.cd" />
     <None Include="Properties\DataSources\DataStructures.Eatery.datasource" />
@@ -119,6 +120,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

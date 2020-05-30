@@ -8,7 +8,7 @@ namespace AccessToDB
 {
     public static class InsertInfo
     {
-        public static int InsertUser(Connector conn, string login, string password, string permission = "NULL")
+        public static int InsertUser(Connector conn, string login, string password, string permission = "2")
         {
             return conn.ExecuteNonQuery(
                 "insert into MyUser " +

@@ -34,7 +34,7 @@ namespace DB_CP
 
             //var test9 = GetInfo.GetEateryWhereMealIsAvailable(m, "CDD6E1D8-FE31-4C87-9446-578E637EABEF");
             //var test10 = UpdateInfo.UpdateMenu(m, "26EAAB16-5CC5-4405-92FC-386987A77B9C", "C526755E-FF20-41A0-AB20-B229013E060F", "В наличии", "19");
-
+            //UpdateInfo.UpdateUserPermissions(m, "8A579234-54B0-4BF2-ABC8-A781EA45AD20", "0");
             //m.CloseConnection();
             
             Application.EnableVisualStyles();

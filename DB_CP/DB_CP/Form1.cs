@@ -21,6 +21,8 @@ namespace DB_CP
         User currentUser = null;
         List<Eatery> currEateries = null;
         List<Meal> currMenu = null;
+        List<User> allUsers = null;
+        List<DataStructures.Menu> realMenu = null;
         
         public Form1()
         {
@@ -52,6 +54,8 @@ namespace DB_CP
                 else
                 {
                     label_auth_res.Visible = false;
+                    button_dislogin.Visible = true;
+                    CheckPerms();
                     LoadBrowseEateryPanel();
                 }
             }
@@ -102,6 +106,35 @@ namespace DB_CP
             panel_auth.BringToFront();
         }
 
+        private void CheckPerms()
+        {
+            if (currentUser.permission == 0)
+            {
+                button_forAdmin.Visible = true;
+                button_ruler.Visible = true;
+            }
+            else if (currentUser.permission == 1)
+            {
+                button_ruler.Visible = true;
+            }
+            button_dislogin.Visible = true;
+        }
+
+        private void button_dislogin_Click(object sender, EventArgs e)
+        {
+            bindingSource1.Clear();
+            myBindingSource.Clear();
+            currentUser = null;
+            currMenu = null;
+            currEateries = null;
+            realMenu = null;
+            allUsers = null;
+            button_dislogin.Visible = false;
+            button_forAdmin.Visible = false;
+            button_ruler.Visible = false;
+            label_browse_username.Visible = false;
+            panel_auth.BringToFront();
+        }
         #endregion
 
         #region Страница со списком столовых
@@ -110,6 +143,7 @@ namespace DB_CP
             bindingSource1.Clear();
             myBindingSource.Clear();
             label_browse_username.Text = "Имя пользователя:\n" + currentUser.login;
+            label_browse_username.Visible = true;
             panel_browseEatery.BringToFront();
             currEateries = GetInfo.GetAllEatery(connectDB);
             foreach (Eatery eat in currEateries)
@@ -178,7 +212,6 @@ namespace DB_CP
             currMenu = GetInfo.GetChoosenMeals(connectDB, currentUser.userID);
             foreach (Meal m in currMenu)
                 bindingSource1.Add(m);
-            label_choosenMeals_login.Text = "Имя пользователя:\n" + currentUser.login;
             panel_choosenMeals.BringToFront();
         }
 
@@ -202,6 +235,78 @@ namespace DB_CP
             currEateries = GetInfo.GetEateryWhereMealIsAvailable(connectDB, currMenu[ind].mealID);
             foreach (Eatery eat in currEateries)
                 myBindingSource.Add(eat);
+        }
+
+
+        #region Admin
+        private void adminUsersLoad()
+        {
+            bindingSource2.Clear();
+            allUsers = GetInfo.GetAllUsers(connectDB);
+            foreach (User u in allUsers)
+                bindingSource2.Add(u);
+        }
+
+        private void button_forAdmin_Click(object sender, EventArgs e)
+        {
+            adminUsersLoad();
+            panel_admin.BringToFront();
+        }
+
+        private void button_admin_back_Click(object sender, EventArgs e)
+        {
+            bindingSource2.Clear();
+            panel_browseEatery.BringToFront();
+        }
+
+        private void dataGridView_usersForAdmin_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ind = e.RowIndex;
+            User u = allUsers[ind];
+            string newRole = "";
+
+            if (e.ColumnIndex == 2)
+                newRole = "-1";
+            else if (e.ColumnIndex == 3)
+                newRole = "1";
+            else if (e.ColumnIndex == 4)
+                newRole = "0";
+            else
+                return;
+
+            UpdateInfo.UpdateUserPermissions(connectDB, u.userID, newRole);
+            adminUsersLoad();
+        }
+        #endregion
+
+        private void dataGridView_eateryRuler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            menuBindingSource.Clear();
+            int ind = e.RowIndex;
+            realMenu = GetInfo.GetMenu(connectDB, currEateries[ind].eateryID);
+            foreach (DataStructures.Menu m in realMenu)
+                menuBindingSource.Add(m);
+        }
+
+        private void LoadRulerEateries()
+        {
+            myBindingSource.Clear();
+            currEateries = GetInfo.GetAllEatery(connectDB);
+            foreach (Eatery eat in currEateries)
+                myBindingSource.Add(eat);
+        }
+
+        private void button_ruler_Click(object sender, EventArgs e)
+        {
+            LoadRulerEateries();
+            panel_ruler.BringToFront();
+        }
+
+        private void button_ruler_goBack_Click(object sender, EventArgs e)
+        {
+            myBindingSource.Clear();
+            menuBindingSource.Clear();
+            panel_browseEatery.BringToFront();
         }
     }
 }

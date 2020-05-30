@@ -133,6 +133,23 @@ namespace AccessToDB
                 return null;
         }
 
+        public static List<Menu> GetMenu(Connector conn, string eateryID)
+        {
+            List<Menu> res = new List<Menu>();
+
+            var tmp = conn.ExecuteSelect(
+                "select mealName, eateryName, day, amount, state " +
+                "from ((Menu join Meal on Menu.mealID = Meal.mealID) join " +
+                "Eatery on Eatery.eateryID = Menu.eateryID) " +
+                "where Eatery.eateryID = '" + eateryID + "'");
+            foreach (object[] i in tmp)
+            {
+                res.Add(new Menu(i));
+            }
+
+            return res;
+        }
+
 
     }
 }

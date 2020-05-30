@@ -4,6 +4,7 @@
     {
         public string userID;
         public string login { get; set; }
+        public string perms { get; set; }
         public int permission = -1;
 
         public User(string id, string login, int permission = -1)
@@ -11,6 +12,7 @@
             userID = id;
             this.login = login;
             this.permission = permission;
+            perms = ((permsEnum)permission).ToString();
         }
 
         /// <summary>
@@ -24,6 +26,15 @@
             // data[2] по идее password
             if (data[3] != System.DBNull.Value)
                 permission = (int)data[3];
+            perms = ((permsEnum)permission).ToString();
         }
+    }
+
+    enum permsEnum
+    {
+        admin = 0,
+        ruler = 1,
+        user = -1,
+        user2 = 2
     }
 }
