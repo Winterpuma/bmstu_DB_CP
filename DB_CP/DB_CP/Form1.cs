@@ -28,7 +28,7 @@ namespace DB_CP
         {
             InitializeComponent();
             panel_auth.BringToFront();
-            
+            panel_menu_auth.BringToFront();
         }
 
         #region Авторизация
@@ -55,6 +55,8 @@ namespace DB_CP
                 {
                     label_auth_res.Visible = false;
                     button_dislogin.Visible = true;
+                    button_favorite.Visible = true;
+                    panel_menu.BringToFront();
                     CheckPerms();
                     LoadBrowseEateryPanel();
                 }
@@ -134,7 +136,9 @@ namespace DB_CP
             button_forAdmin.Visible = false;
             button_ruler.Visible = false;
             label_browse_username.Visible = false;
+            button_favorite.Visible = false;
             panel_auth.BringToFront();
+            panel_menu_auth.BringToFront();
         }
         #endregion
 
@@ -158,16 +162,30 @@ namespace DB_CP
             int ind = e.RowIndex;
             LoadBrowseEateryMenuPanel(currEateries[ind]);
         }
-        #endregion
+
+        private void button_browseEatery_filter_Click(object sender, EventArgs e)
+        {
+            string colName = comboBox_browseEatery.Text;
+            string val = textBox_browseEatery_value.Text;
+            bindingSource1.Clear(); // очистить блюда
+            myBindingSource.Clear(); // очистить питальни
+            currEateries = GetInfo.GetEateryWhere(connectDB, colName, val);
+            foreach (Eatery eat in currEateries)
+                myBindingSource.Add(eat);
+        }
 
         private void LoadBrowseEateryMenuPanel(Eatery eatery)
         {
+            label_menu_eateryName.Text = eatery.eateryName;
             bindingSource1.Clear();
             currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eatery.eateryID);
             foreach (Meal m in currMenu)
                 bindingSource1.Add(m);
+            panel_browseEateryMenu.BringToFront();
         }
+        #endregion 
 
+        /*
         private void MDA(Eatery eatery)
         {
             string sqlCommand = "select Meal.mealID, mealName, mealType, kkal, cost " +
@@ -184,19 +202,10 @@ namespace DB_CP
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             adapter.Fill(table);
             dataGridView_Meals.DataSource = table;
-        }
+        }*/
 
-        private void button_browseEatery_filter_Click(object sender, EventArgs e)
-        {
-            string colName = comboBox_browseEatery.Text;
-            string val = textBox_browseEatery_value.Text;
-            bindingSource1.Clear(); // очистить блюда
-            myBindingSource.Clear(); // очистить питальни
-            currEateries = GetInfo.GetEateryWhere(connectDB, colName, val);
-            foreach (Eatery eat in currEateries)
-                myBindingSource.Add(eat);
-        }
 
+        #region Избранные блюда
         private void dataGridView_Meals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int ind = e.RowIndex;
@@ -216,7 +225,7 @@ namespace DB_CP
             panel_choosenMeals.BringToFront();
         }
 
-        private void dataGridView_choosenMeals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ChoosenMeals_delete(object sender, DataGridViewCellEventArgs e)
         {
             int ind = e.RowIndex;
             DeleteInfo.DeleteMealChoosen(connectDB, currentUser.userID, currMenu[ind].mealID);
@@ -232,13 +241,30 @@ namespace DB_CP
 
         private void dataGridView_choosenMeals_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            myBindingSource.Clear();
             int ind = e.RowIndex;
-            currEateries = GetInfo.GetEateryWhereMealIsAvailable(connectDB, currMenu[ind].mealID);
+            LoadMealPanel(currMenu[ind]);
+            panel_mealInfo.BringToFront();
+        }
+
+        private void LoadMealPanel(Meal meal)
+        {
+            myBindingSource.Clear();
+            currEateries = GetInfo.GetEateryWhereMealIsAvailable(connectDB, meal.mealID);
             foreach (Eatery eat in currEateries)
                 myBindingSource.Add(eat);
         }
 
+        private void button_favorite_Click(object sender, EventArgs e)
+        {
+            label_browseEatery_insertInfo.Text = "";
+            myBindingSource.Clear();
+            bindingSource1.Clear();
+            currMenu = GetInfo.GetChoosenMeals(connectDB, currentUser.userID);
+            foreach (Meal m in currMenu)
+                bindingSource1.Add(m);
+            panel_choosenMeals.BringToFront();
+        }
+        #endregion
 
         #region Admin
         private void adminUsersLoad()
@@ -281,6 +307,7 @@ namespace DB_CP
         }
         #endregion
 
+        #region Ruler
         private void dataGridView_eateryRuler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             menuBindingSource.Clear();
@@ -309,6 +336,28 @@ namespace DB_CP
             myBindingSource.Clear();
             menuBindingSource.Clear();
             panel_browseEatery.BringToFront();
+        }
+        #endregion
+
+        private void button_browseEateryMenu_goBack_Click(object sender, EventArgs e)
+        {
+            LoadBrowseEateryPanel();
+        }
+
+        private void button_menu_inStock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_menu_all_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_auth_guest_Click(object sender, EventArgs e)
+        {
+            currentUser = new User("-2", "guest");
+            LoadBrowseEateryPanel();
         }
     }
 }
