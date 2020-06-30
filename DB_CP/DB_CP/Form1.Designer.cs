@@ -49,20 +49,11 @@
             this.label_browseEateryDescription1 = new System.Windows.Forms.Label();
             this.label_browse_welcome = new System.Windows.Forms.Label();
             this.dataGridView_Eatery = new System.Windows.Forms.DataGridView();
-            this.eateryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eateryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eateryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_Meals = new System.Windows.Forms.DataGridView();
-            this.mealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kkal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mealNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mealTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kkalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,14 +72,9 @@
             this.label_newUser_pass = new System.Windows.Forms.Label();
             this.label_newUser_login = new System.Windows.Forms.Label();
             this.panel_choosenMeals = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_choosenMeals_info = new System.Windows.Forms.Label();
             this.dataGridView_choosenMeals = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,14 +82,9 @@
             this.button_menu_toMain = new System.Windows.Forms.Button();
             this.label_choosenMeals_infoEateries = new System.Windows.Forms.Label();
             this.dataGridView_EatWhereMealIsAvail = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_forAdmin = new System.Windows.Forms.Button();
             this.button_dislogin = new System.Windows.Forms.Button();
             this.button_ruler = new System.Windows.Forms.Button();
@@ -139,13 +120,30 @@
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_favorite = new System.Windows.Forms.Button();
             this.panel_browseEateryMenu = new System.Windows.Forms.Panel();
+            this.label_eatery_type = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_eatery_description = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label_eatery_location = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.button_menu_all = new System.Windows.Forms.Button();
             this.button_menu_inStock = new System.Windows.Forms.Button();
-            this.label_menu_eateryName = new System.Windows.Forms.Label();
+            this.label_eatery_name = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button_browseEateryMenu_goBack = new System.Windows.Forms.Button();
             this.panel_mealInfo = new System.Windows.Forms.Panel();
+            this.button_meal_deleteChoosen = new System.Windows.Forms.Button();
+            this.button_meal_addChoosen = new System.Windows.Forms.Button();
+            this.label_meal_cost = new System.Windows.Forms.Label();
+            this.label_meal_kkal = new System.Windows.Forms.Label();
+            this.label_meal_type = new System.Windows.Forms.Label();
+            this.label_meal_name = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
@@ -182,7 +180,7 @@
             this.panel_auth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_auth.Location = new System.Drawing.Point(20, 20);
             this.panel_auth.Name = "panel_auth";
-            this.panel_auth.Size = new System.Drawing.Size(700, 400);
+            this.panel_auth.Size = new System.Drawing.Size(700, 500);
             this.panel_auth.TabIndex = 0;
             // 
             // label_auth_welcome
@@ -273,7 +271,7 @@
             this.panel_browseEatery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_browseEatery.Location = new System.Drawing.Point(20, 20);
             this.panel_browseEatery.Name = "panel_browseEatery";
-            this.panel_browseEatery.Size = new System.Drawing.Size(700, 400);
+            this.panel_browseEatery.Size = new System.Drawing.Size(700, 500);
             this.panel_browseEatery.TabIndex = 6;
             // 
             // button_browseEatery
@@ -296,7 +294,7 @@
             // 
             // button_browseEatery_filter
             // 
-            this.button_browseEatery_filter.Location = new System.Drawing.Point(487, 338);
+            this.button_browseEatery_filter.Location = new System.Drawing.Point(487, 453);
             this.button_browseEatery_filter.Name = "button_browseEatery_filter";
             this.button_browseEatery_filter.Size = new System.Drawing.Size(148, 28);
             this.button_browseEatery_filter.TabIndex = 15;
@@ -306,7 +304,7 @@
             // 
             // textBox_browseEatery_value
             // 
-            this.textBox_browseEatery_value.Location = new System.Drawing.Point(330, 340);
+            this.textBox_browseEatery_value.Location = new System.Drawing.Point(333, 453);
             this.textBox_browseEatery_value.Name = "textBox_browseEatery_value";
             this.textBox_browseEatery_value.Size = new System.Drawing.Size(124, 26);
             this.textBox_browseEatery_value.TabIndex = 14;
@@ -317,7 +315,7 @@
             this.comboBox_browseEatery.Items.AddRange(new object[] {
             "location",
             "eateryType"});
-            this.comboBox_browseEatery.Location = new System.Drawing.Point(190, 341);
+            this.comboBox_browseEatery.Location = new System.Drawing.Point(190, 451);
             this.comboBox_browseEatery.Name = "comboBox_browseEatery";
             this.comboBox_browseEatery.Size = new System.Drawing.Size(121, 28);
             this.comboBox_browseEatery.TabIndex = 13;
@@ -336,7 +334,7 @@
             // label_browseEateryDescription2
             // 
             this.label_browseEateryDescription2.AutoSize = true;
-            this.label_browseEateryDescription2.Location = new System.Drawing.Point(38, 129);
+            this.label_browseEateryDescription2.Location = new System.Drawing.Point(64, 135);
             this.label_browseEateryDescription2.Name = "label_browseEateryDescription2";
             this.label_browseEateryDescription2.Size = new System.Drawing.Size(553, 20);
             this.label_browseEateryDescription2.TabIndex = 11;
@@ -345,7 +343,7 @@
             // label_browseEateryDescription1
             // 
             this.label_browseEateryDescription1.AutoSize = true;
-            this.label_browseEateryDescription1.Location = new System.Drawing.Point(38, 98);
+            this.label_browseEateryDescription1.Location = new System.Drawing.Point(64, 104);
             this.label_browseEateryDescription1.Name = "label_browseEateryDescription1";
             this.label_browseEateryDescription1.Size = new System.Drawing.Size(419, 20);
             this.label_browseEateryDescription1.TabIndex = 9;
@@ -354,7 +352,7 @@
             // label_browse_welcome
             // 
             this.label_browse_welcome.AutoSize = true;
-            this.label_browse_welcome.Location = new System.Drawing.Point(38, 42);
+            this.label_browse_welcome.Location = new System.Drawing.Point(35, 52);
             this.label_browse_welcome.Name = "label_browse_welcome";
             this.label_browse_welcome.Size = new System.Drawing.Size(232, 20);
             this.label_browse_welcome.TabIndex = 5;
@@ -365,72 +363,36 @@
             this.dataGridView_Eatery.AutoGenerateColumns = false;
             this.dataGridView_Eatery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Eatery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.eateryName,
-            this.location,
-            this.eateryType,
-            this.description,
             this.eateryNameDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.eateryTypeDataGridViewTextBoxColumn});
+            this.eateryTypeDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn});
             this.dataGridView_Eatery.DataSource = this.myBindingSource;
-            this.dataGridView_Eatery.Location = new System.Drawing.Point(42, 158);
+            this.dataGridView_Eatery.Location = new System.Drawing.Point(68, 172);
             this.dataGridView_Eatery.Name = "dataGridView_Eatery";
-            this.dataGridView_Eatery.Size = new System.Drawing.Size(593, 159);
+            this.dataGridView_Eatery.Size = new System.Drawing.Size(567, 239);
             this.dataGridView_Eatery.TabIndex = 8;
             this.dataGridView_Eatery.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Eatery_CellDoubleClick);
-            // 
-            // eateryName
-            // 
-            this.eateryName.DataPropertyName = "eateryName";
-            this.eateryName.HeaderText = "eateryName";
-            this.eateryName.Name = "eateryName";
-            this.eateryName.ReadOnly = true;
-            // 
-            // location
-            // 
-            this.location.DataPropertyName = "location";
-            this.location.HeaderText = "location";
-            this.location.Name = "location";
-            this.location.ReadOnly = true;
-            // 
-            // eateryType
-            // 
-            this.eateryType.DataPropertyName = "eateryType";
-            this.eateryType.HeaderText = "eateryType";
-            this.eateryType.Name = "eateryType";
-            this.eateryType.ReadOnly = true;
-            // 
-            // description
-            // 
-            this.description.DataPropertyName = "description";
-            this.description.HeaderText = "description";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
             // 
             // eateryNameDataGridViewTextBoxColumn
             // 
             this.eateryNameDataGridViewTextBoxColumn.DataPropertyName = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn.HeaderText = "eateryName";
+            this.eateryNameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.eateryNameDataGridViewTextBoxColumn.Name = "eateryNameDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.eateryNameDataGridViewTextBoxColumn.Width = 220;
             // 
             // eateryTypeDataGridViewTextBoxColumn
             // 
             this.eateryTypeDataGridViewTextBoxColumn.DataPropertyName = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn.HeaderText = "eateryType";
+            this.eateryTypeDataGridViewTextBoxColumn.HeaderText = "Тип";
             this.eateryTypeDataGridViewTextBoxColumn.Name = "eateryTypeDataGridViewTextBoxColumn";
+            this.eateryTypeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Расположение";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 150;
             // 
             // myBindingSource
             // 
@@ -441,59 +403,28 @@
             this.dataGridView_Meals.AutoGenerateColumns = false;
             this.dataGridView_Meals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Meals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mealName,
-            this.mealType,
-            this.kkal,
-            this.cost,
             this.mealNameDataGridViewTextBoxColumn,
             this.mealTypeDataGridViewTextBoxColumn,
             this.kkalDataGridViewTextBoxColumn,
             this.costDataGridViewTextBoxColumn});
             this.dataGridView_Meals.DataSource = this.bindingSource1;
-            this.dataGridView_Meals.Location = new System.Drawing.Point(19, 160);
+            this.dataGridView_Meals.Location = new System.Drawing.Point(30, 236);
             this.dataGridView_Meals.Name = "dataGridView_Meals";
-            this.dataGridView_Meals.Size = new System.Drawing.Size(649, 159);
+            this.dataGridView_Meals.Size = new System.Drawing.Size(495, 211);
             this.dataGridView_Meals.TabIndex = 9;
-            this.dataGridView_Meals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Meals_CellDoubleClick);
-            // 
-            // mealName
-            // 
-            this.mealName.DataPropertyName = "mealName";
-            this.mealName.HeaderText = "mealName";
-            this.mealName.Name = "mealName";
-            this.mealName.ReadOnly = true;
-            // 
-            // mealType
-            // 
-            this.mealType.DataPropertyName = "mealType";
-            this.mealType.HeaderText = "mealType";
-            this.mealType.Name = "mealType";
-            this.mealType.ReadOnly = true;
-            // 
-            // kkal
-            // 
-            this.kkal.DataPropertyName = "kkal";
-            this.kkal.HeaderText = "kkal";
-            this.kkal.Name = "kkal";
-            this.kkal.ReadOnly = true;
-            // 
-            // cost
-            // 
-            this.cost.DataPropertyName = "cost";
-            this.cost.HeaderText = "cost";
-            this.cost.Name = "cost";
-            this.cost.ReadOnly = true;
+            this.dataGridView_Meals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoadMealClick);
             // 
             // mealNameDataGridViewTextBoxColumn
             // 
             this.mealNameDataGridViewTextBoxColumn.DataPropertyName = "mealName";
-            this.mealNameDataGridViewTextBoxColumn.HeaderText = "mealName";
+            this.mealNameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.mealNameDataGridViewTextBoxColumn.Name = "mealNameDataGridViewTextBoxColumn";
+            this.mealNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // mealTypeDataGridViewTextBoxColumn
             // 
             this.mealTypeDataGridViewTextBoxColumn.DataPropertyName = "mealType";
-            this.mealTypeDataGridViewTextBoxColumn.HeaderText = "mealType";
+            this.mealTypeDataGridViewTextBoxColumn.HeaderText = "Тип";
             this.mealTypeDataGridViewTextBoxColumn.Name = "mealTypeDataGridViewTextBoxColumn";
             // 
             // kkalDataGridViewTextBoxColumn
@@ -505,7 +436,7 @@
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             // 
             // bindingSource1
@@ -539,7 +470,7 @@
             this.panel_newUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_newUser.Location = new System.Drawing.Point(20, 20);
             this.panel_newUser.Name = "panel_newUser";
-            this.panel_newUser.Size = new System.Drawing.Size(700, 400);
+            this.panel_newUser.Size = new System.Drawing.Size(700, 500);
             this.panel_newUser.TabIndex = 8;
             // 
             // button_newUser_return
@@ -555,7 +486,7 @@
             // label_newUser_info
             // 
             this.label_newUser_info.AutoSize = true;
-            this.label_newUser_info.Location = new System.Drawing.Point(92, 98);
+            this.label_newUser_info.Location = new System.Drawing.Point(82, 119);
             this.label_newUser_info.Name = "label_newUser_info";
             this.label_newUser_info.Size = new System.Drawing.Size(362, 20);
             this.label_newUser_info.TabIndex = 8;
@@ -563,7 +494,7 @@
             // 
             // textBox_newUser_pass2
             // 
-            this.textBox_newUser_pass2.Location = new System.Drawing.Point(208, 225);
+            this.textBox_newUser_pass2.Location = new System.Drawing.Point(198, 246);
             this.textBox_newUser_pass2.Name = "textBox_newUser_pass2";
             this.textBox_newUser_pass2.PasswordChar = '*';
             this.textBox_newUser_pass2.Size = new System.Drawing.Size(190, 26);
@@ -572,7 +503,7 @@
             // label_newUser_pass2
             // 
             this.label_newUser_pass2.AutoSize = true;
-            this.label_newUser_pass2.Location = new System.Drawing.Point(121, 231);
+            this.label_newUser_pass2.Location = new System.Drawing.Point(111, 252);
             this.label_newUser_pass2.Name = "label_newUser_pass2";
             this.label_newUser_pass2.Size = new System.Drawing.Size(80, 20);
             this.label_newUser_pass2.TabIndex = 6;
@@ -582,7 +513,7 @@
             // 
             this.label_newUser_result.AutoSize = true;
             this.label_newUser_result.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label_newUser_result.Location = new System.Drawing.Point(211, 358);
+            this.label_newUser_result.Location = new System.Drawing.Point(201, 379);
             this.label_newUser_result.Name = "label_newUser_result";
             this.label_newUser_result.Size = new System.Drawing.Size(88, 20);
             this.label_newUser_result.TabIndex = 5;
@@ -591,7 +522,7 @@
             // 
             // button_newUser_register
             // 
-            this.button_newUser_register.Location = new System.Drawing.Point(209, 271);
+            this.button_newUser_register.Location = new System.Drawing.Point(199, 292);
             this.button_newUser_register.Name = "button_newUser_register";
             this.button_newUser_register.Size = new System.Drawing.Size(189, 35);
             this.button_newUser_register.TabIndex = 4;
@@ -601,7 +532,7 @@
             // 
             // textBox_newUser_pass
             // 
-            this.textBox_newUser_pass.Location = new System.Drawing.Point(209, 193);
+            this.textBox_newUser_pass.Location = new System.Drawing.Point(199, 214);
             this.textBox_newUser_pass.Name = "textBox_newUser_pass";
             this.textBox_newUser_pass.PasswordChar = '*';
             this.textBox_newUser_pass.Size = new System.Drawing.Size(189, 26);
@@ -609,7 +540,7 @@
             // 
             // textBox_newUser_login
             // 
-            this.textBox_newUser_login.Location = new System.Drawing.Point(209, 142);
+            this.textBox_newUser_login.Location = new System.Drawing.Point(199, 163);
             this.textBox_newUser_login.Name = "textBox_newUser_login";
             this.textBox_newUser_login.Size = new System.Drawing.Size(189, 26);
             this.textBox_newUser_login.TabIndex = 2;
@@ -617,7 +548,7 @@
             // label_newUser_pass
             // 
             this.label_newUser_pass.AutoSize = true;
-            this.label_newUser_pass.Location = new System.Drawing.Point(130, 196);
+            this.label_newUser_pass.Location = new System.Drawing.Point(120, 217);
             this.label_newUser_pass.Name = "label_newUser_pass";
             this.label_newUser_pass.Size = new System.Drawing.Size(71, 20);
             this.label_newUser_pass.TabIndex = 1;
@@ -626,7 +557,7 @@
             // label_newUser_login
             // 
             this.label_newUser_login.AutoSize = true;
-            this.label_newUser_login.Location = new System.Drawing.Point(137, 149);
+            this.label_newUser_login.Location = new System.Drawing.Point(127, 170);
             this.label_newUser_login.Name = "label_newUser_login";
             this.label_newUser_login.Size = new System.Drawing.Size(59, 20);
             this.label_newUser_login.TabIndex = 0;
@@ -634,24 +565,14 @@
             // 
             // panel_choosenMeals
             // 
-            this.panel_choosenMeals.Controls.Add(this.label2);
             this.panel_choosenMeals.Controls.Add(this.label1);
             this.panel_choosenMeals.Controls.Add(this.label_choosenMeals_info);
             this.panel_choosenMeals.Controls.Add(this.dataGridView_choosenMeals);
             this.panel_choosenMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_choosenMeals.Location = new System.Drawing.Point(20, 20);
             this.panel_choosenMeals.Name = "panel_choosenMeals";
-            this.panel_choosenMeals.Size = new System.Drawing.Size(700, 400);
+            this.panel_choosenMeals.Size = new System.Drawing.Size(700, 500);
             this.panel_choosenMeals.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 304);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(510, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Дважды нажмите на блюдо чтобы удалить его из личного списка";
             // 
             // label1
             // 
@@ -666,69 +587,37 @@
             this.label_choosenMeals_info.AutoSize = true;
             this.label_choosenMeals_info.Location = new System.Drawing.Point(48, 84);
             this.label_choosenMeals_info.Name = "label_choosenMeals_info";
-            this.label_choosenMeals_info.Size = new System.Drawing.Size(240, 20);
+            this.label_choosenMeals_info.Size = new System.Drawing.Size(324, 20);
             this.label_choosenMeals_info.TabIndex = 5;
-            this.label_choosenMeals_info.Text = "Это ваш личный список блюд:";
+            this.label_choosenMeals_info.Text = "Это ваш личный список избранных блюд:";
             // 
             // dataGridView_choosenMeals
             // 
             this.dataGridView_choosenMeals.AutoGenerateColumns = false;
             this.dataGridView_choosenMeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_choosenMeals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView_choosenMeals.DataSource = this.bindingSource1;
-            this.dataGridView_choosenMeals.Location = new System.Drawing.Point(39, 122);
+            this.dataGridView_choosenMeals.Location = new System.Drawing.Point(52, 127);
             this.dataGridView_choosenMeals.Name = "dataGridView_choosenMeals";
-            this.dataGridView_choosenMeals.Size = new System.Drawing.Size(448, 159);
+            this.dataGridView_choosenMeals.Size = new System.Drawing.Size(448, 218);
             this.dataGridView_choosenMeals.TabIndex = 9;
             this.dataGridView_choosenMeals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_choosenMeals_CellClick);
-            this.dataGridView_choosenMeals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChoosenMeals_delete);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "mealName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "mealType";
-            this.dataGridViewTextBoxColumn2.HeaderText = "mealType";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "kkal";
-            this.dataGridViewTextBoxColumn3.HeaderText = "kkal";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cost";
-            this.dataGridViewTextBoxColumn4.HeaderText = "cost";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridView_choosenMeals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteFromChoosen);
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "mealName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Название";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "mealType";
-            this.dataGridViewTextBoxColumn6.HeaderText = "mealType";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Тип";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
@@ -740,7 +629,7 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "cost";
-            this.dataGridViewTextBoxColumn8.HeaderText = "cost";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Цена";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // button_menu_toMain
@@ -756,82 +645,46 @@
             // label_choosenMeals_infoEateries
             // 
             this.label_choosenMeals_infoEateries.AutoSize = true;
-            this.label_choosenMeals_infoEateries.Location = new System.Drawing.Point(231, 180);
+            this.label_choosenMeals_infoEateries.Location = new System.Drawing.Point(82, 271);
             this.label_choosenMeals_infoEateries.Name = "label_choosenMeals_infoEateries";
-            this.label_choosenMeals_infoEateries.Size = new System.Drawing.Size(213, 20);
+            this.label_choosenMeals_infoEateries.Size = new System.Drawing.Size(217, 20);
             this.label_choosenMeals_infoEateries.TabIndex = 9;
-            this.label_choosenMeals_infoEateries.Text = "Где блюдо есть в наличии";
+            this.label_choosenMeals_infoEateries.Text = "Где блюдо есть в наличии:";
             // 
             // dataGridView_EatWhereMealIsAvail
             // 
             this.dataGridView_EatWhereMealIsAvail.AutoGenerateColumns = false;
             this.dataGridView_EatWhereMealIsAvail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_EatWhereMealIsAvail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn14});
             this.dataGridView_EatWhereMealIsAvail.DataSource = this.myBindingSource;
-            this.dataGridView_EatWhereMealIsAvail.Location = new System.Drawing.Point(235, 217);
+            this.dataGridView_EatWhereMealIsAvail.Location = new System.Drawing.Point(85, 304);
             this.dataGridView_EatWhereMealIsAvail.Name = "dataGridView_EatWhereMealIsAvail";
-            this.dataGridView_EatWhereMealIsAvail.Size = new System.Drawing.Size(445, 159);
+            this.dataGridView_EatWhereMealIsAvail.Size = new System.Drawing.Size(550, 170);
             this.dataGridView_EatWhereMealIsAvail.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "eateryName";
-            this.dataGridViewTextBoxColumn9.HeaderText = "eateryName";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "location";
-            this.dataGridViewTextBoxColumn10.HeaderText = "location";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "eateryType";
-            this.dataGridViewTextBoxColumn11.HeaderText = "eateryType";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "description";
-            this.dataGridViewTextBoxColumn12.HeaderText = "description";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "eateryName";
-            this.dataGridViewTextBoxColumn13.HeaderText = "eateryName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Название";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "location";
-            this.dataGridViewTextBoxColumn14.HeaderText = "location";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "description";
-            this.dataGridViewTextBoxColumn15.HeaderText = "description";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn13.Width = 200;
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "eateryType";
-            this.dataGridViewTextBoxColumn16.HeaderText = "eateryType";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Тип";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "location";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Расположение";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 150;
             // 
             // button_forAdmin
             // 
@@ -872,7 +725,7 @@
             this.panel_admin.Controls.Add(this.button_admin_back);
             this.panel_admin.Controls.Add(this.label4);
             this.panel_admin.Controls.Add(this.dataGridView_usersForAdmin);
-            this.panel_admin.Location = new System.Drawing.Point(887, 455);
+            this.panel_admin.Location = new System.Drawing.Point(949, 364);
             this.panel_admin.Name = "panel_admin";
             this.panel_admin.Size = new System.Drawing.Size(978, 381);
             this.panel_admin.TabIndex = 20;
@@ -967,7 +820,7 @@
             this.panel_ruler.Controls.Add(this.button_ruler_goBack);
             this.panel_ruler.Controls.Add(this.label3);
             this.panel_ruler.Controls.Add(this.dataGridView_eateryRuler);
-            this.panel_ruler.Location = new System.Drawing.Point(848, 479);
+            this.panel_ruler.Location = new System.Drawing.Point(946, 399);
             this.panel_ruler.Name = "panel_ruler";
             this.panel_ruler.Size = new System.Drawing.Size(978, 381);
             this.panel_ruler.TabIndex = 21;
@@ -1108,7 +961,7 @@
             this.panel_menu_auth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_menu_auth.Location = new System.Drawing.Point(740, 20);
             this.panel_menu_auth.Name = "panel_menu_auth";
-            this.panel_menu_auth.Size = new System.Drawing.Size(200, 400);
+            this.panel_menu_auth.Size = new System.Drawing.Size(200, 500);
             this.panel_menu_auth.TabIndex = 22;
             // 
             // panel_menu
@@ -1122,7 +975,7 @@
             this.panel_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_menu.Location = new System.Drawing.Point(740, 20);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(200, 400);
+            this.panel_menu.Size = new System.Drawing.Size(200, 500);
             this.panel_menu.TabIndex = 23;
             // 
             // button_favorite
@@ -1138,9 +991,16 @@
             // 
             // panel_browseEateryMenu
             // 
+            this.panel_browseEateryMenu.Controls.Add(this.label_eatery_type);
+            this.panel_browseEateryMenu.Controls.Add(this.label11);
+            this.panel_browseEateryMenu.Controls.Add(this.label_eatery_description);
+            this.panel_browseEateryMenu.Controls.Add(this.label12);
+            this.panel_browseEateryMenu.Controls.Add(this.label_eatery_location);
+            this.panel_browseEateryMenu.Controls.Add(this.label10);
+            this.panel_browseEateryMenu.Controls.Add(this.label9);
             this.panel_browseEateryMenu.Controls.Add(this.button_menu_all);
             this.panel_browseEateryMenu.Controls.Add(this.button_menu_inStock);
-            this.panel_browseEateryMenu.Controls.Add(this.label_menu_eateryName);
+            this.panel_browseEateryMenu.Controls.Add(this.label_eatery_name);
             this.panel_browseEateryMenu.Controls.Add(this.label7);
             this.panel_browseEateryMenu.Controls.Add(this.label6);
             this.panel_browseEateryMenu.Controls.Add(this.button_browseEateryMenu_goBack);
@@ -1148,12 +1008,75 @@
             this.panel_browseEateryMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_browseEateryMenu.Location = new System.Drawing.Point(20, 20);
             this.panel_browseEateryMenu.Name = "panel_browseEateryMenu";
-            this.panel_browseEateryMenu.Size = new System.Drawing.Size(700, 400);
+            this.panel_browseEateryMenu.Size = new System.Drawing.Size(700, 500);
             this.panel_browseEateryMenu.TabIndex = 24;
+            // 
+            // label_eatery_type
+            // 
+            this.label_eatery_type.AutoSize = true;
+            this.label_eatery_type.Location = new System.Drawing.Point(156, 111);
+            this.label_eatery_type.Name = "label_eatery_type";
+            this.label_eatery_type.Size = new System.Drawing.Size(39, 20);
+            this.label_eatery_type.TabIndex = 29;
+            this.label_eatery_type.Text = "type";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 20);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Тип:";
+            // 
+            // label_eatery_description
+            // 
+            this.label_eatery_description.AutoSize = true;
+            this.label_eatery_description.Location = new System.Drawing.Point(156, 161);
+            this.label_eatery_description.Name = "label_eatery_description";
+            this.label_eatery_description.Size = new System.Drawing.Size(48, 20);
+            this.label_eatery_description.TabIndex = 27;
+            this.label_eatery_description.Text = "descr";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(26, 161);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 20);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Описание:";
+            // 
+            // label_eatery_location
+            // 
+            this.label_eatery_location.AutoSize = true;
+            this.label_eatery_location.Location = new System.Drawing.Point(156, 135);
+            this.label_eatery_location.Name = "label_eatery_location";
+            this.label_eatery_location.Size = new System.Drawing.Size(64, 20);
+            this.label_eatery_location.TabIndex = 25;
+            this.label_eatery_location.Text = "location";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(26, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 20);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Расположение:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(26, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 20);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Питальня:";
             // 
             // button_menu_all
             // 
-            this.button_menu_all.Location = new System.Drawing.Point(127, 348);
+            this.button_menu_all.Location = new System.Drawing.Point(556, 261);
             this.button_menu_all.Name = "button_menu_all";
             this.button_menu_all.Size = new System.Drawing.Size(102, 30);
             this.button_menu_all.TabIndex = 22;
@@ -1163,7 +1086,7 @@
             // 
             // button_menu_inStock
             // 
-            this.button_menu_inStock.Location = new System.Drawing.Point(19, 348);
+            this.button_menu_inStock.Location = new System.Drawing.Point(555, 311);
             this.button_menu_inStock.Name = "button_menu_inStock";
             this.button_menu_inStock.Size = new System.Drawing.Size(102, 30);
             this.button_menu_inStock.TabIndex = 21;
@@ -1171,28 +1094,28 @@
             this.button_menu_inStock.UseVisualStyleBackColor = true;
             this.button_menu_inStock.Click += new System.EventHandler(this.button_menu_inStock_Click);
             // 
-            // label_menu_eateryName
+            // label_eatery_name
             // 
-            this.label_menu_eateryName.AutoSize = true;
-            this.label_menu_eateryName.Location = new System.Drawing.Point(320, 87);
-            this.label_menu_eateryName.Name = "label_menu_eateryName";
-            this.label_menu_eateryName.Size = new System.Drawing.Size(49, 20);
-            this.label_menu_eateryName.TabIndex = 20;
-            this.label_menu_eateryName.Text = "name";
+            this.label_eatery_name.AutoSize = true;
+            this.label_eatery_name.Location = new System.Drawing.Point(156, 84);
+            this.label_eatery_name.Name = "label_eatery_name";
+            this.label_eatery_name.Size = new System.Drawing.Size(49, 20);
+            this.label_eatery_name.TabIndex = 20;
+            this.label_eatery_name.Text = "name";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 87);
+            this.label7.Location = new System.Drawing.Point(26, 207);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(299, 20);
+            this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Ниже представлено меню заведения ";
+            this.label7.Text = "Меню:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 119);
+            this.label6.Location = new System.Drawing.Point(26, 459);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(513, 20);
             this.label6.TabIndex = 18;
@@ -1210,39 +1133,139 @@
             // 
             // panel_mealInfo
             // 
+            this.panel_mealInfo.Controls.Add(this.button_meal_deleteChoosen);
+            this.panel_mealInfo.Controls.Add(this.button_meal_addChoosen);
+            this.panel_mealInfo.Controls.Add(this.label_meal_cost);
+            this.panel_mealInfo.Controls.Add(this.label_meal_kkal);
+            this.panel_mealInfo.Controls.Add(this.label_meal_type);
+            this.panel_mealInfo.Controls.Add(this.label_meal_name);
+            this.panel_mealInfo.Controls.Add(this.label17);
+            this.panel_mealInfo.Controls.Add(this.label16);
+            this.panel_mealInfo.Controls.Add(this.label15);
+            this.panel_mealInfo.Controls.Add(this.label14);
             this.panel_mealInfo.Controls.Add(this.label8);
             this.panel_mealInfo.Controls.Add(this.dataGridView_EatWhereMealIsAvail);
             this.panel_mealInfo.Controls.Add(this.label_choosenMeals_infoEateries);
             this.panel_mealInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_mealInfo.Location = new System.Drawing.Point(20, 20);
             this.panel_mealInfo.Name = "panel_mealInfo";
-            this.panel_mealInfo.Size = new System.Drawing.Size(700, 400);
+            this.panel_mealInfo.Size = new System.Drawing.Size(700, 500);
             this.panel_mealInfo.TabIndex = 25;
+            // 
+            // button_meal_deleteChoosen
+            // 
+            this.button_meal_deleteChoosen.Location = new System.Drawing.Point(416, 95);
+            this.button_meal_deleteChoosen.Name = "button_meal_deleteChoosen";
+            this.button_meal_deleteChoosen.Size = new System.Drawing.Size(219, 31);
+            this.button_meal_deleteChoosen.TabIndex = 20;
+            this.button_meal_deleteChoosen.Text = "Удалить из избранного";
+            this.button_meal_deleteChoosen.UseVisualStyleBackColor = true;
+            // 
+            // button_meal_addChoosen
+            // 
+            this.button_meal_addChoosen.Location = new System.Drawing.Point(416, 58);
+            this.button_meal_addChoosen.Name = "button_meal_addChoosen";
+            this.button_meal_addChoosen.Size = new System.Drawing.Size(219, 31);
+            this.button_meal_addChoosen.TabIndex = 19;
+            this.button_meal_addChoosen.Text = "Добавить в избранное";
+            this.button_meal_addChoosen.UseVisualStyleBackColor = true;
+            // 
+            // label_meal_cost
+            // 
+            this.label_meal_cost.AutoSize = true;
+            this.label_meal_cost.Location = new System.Drawing.Point(230, 197);
+            this.label_meal_cost.Name = "label_meal_cost";
+            this.label_meal_cost.Size = new System.Drawing.Size(39, 20);
+            this.label_meal_cost.TabIndex = 18;
+            this.label_meal_cost.Text = "cost";
+            // 
+            // label_meal_kkal
+            // 
+            this.label_meal_kkal.AutoSize = true;
+            this.label_meal_kkal.Location = new System.Drawing.Point(228, 170);
+            this.label_meal_kkal.Name = "label_meal_kkal";
+            this.label_meal_kkal.Size = new System.Drawing.Size(37, 20);
+            this.label_meal_kkal.TabIndex = 17;
+            this.label_meal_kkal.Text = "kkal";
+            // 
+            // label_meal_type
+            // 
+            this.label_meal_type.AutoSize = true;
+            this.label_meal_type.Location = new System.Drawing.Point(227, 141);
+            this.label_meal_type.Name = "label_meal_type";
+            this.label_meal_type.Size = new System.Drawing.Size(39, 20);
+            this.label_meal_type.TabIndex = 16;
+            this.label_meal_type.Text = "type";
+            // 
+            // label_meal_name
+            // 
+            this.label_meal_name.AutoSize = true;
+            this.label_meal_name.Location = new System.Drawing.Point(227, 111);
+            this.label_meal_name.Name = "label_meal_name";
+            this.label_meal_name.Size = new System.Drawing.Size(49, 20);
+            this.label_meal_name.TabIndex = 15;
+            this.label_meal_name.Text = "name";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(83, 197);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 20);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Цена:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(82, 169);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(122, 20);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Калорийность:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(81, 141);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(40, 20);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Тип:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(81, 111);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 20);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Название:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(38, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 20);
+            this.label8.Size = new System.Drawing.Size(177, 20);
             this.label8.TabIndex = 10;
-            this.label8.Text = "Информация о блюде TODO";
+            this.label8.Text = "Информация о блюде";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 510);
-            this.Controls.Add(this.panel_choosenMeals);
-            this.Controls.Add(this.panel_menu_auth);
+            this.ClientSize = new System.Drawing.Size(959, 534);
             this.Controls.Add(this.panel_ruler);
             this.Controls.Add(this.panel_admin);
+            this.Controls.Add(this.panel_menu_auth);
+            this.Controls.Add(this.panel_menu);
+            this.Controls.Add(this.panel_mealInfo);
+            this.Controls.Add(this.panel_choosenMeals);
             this.Controls.Add(this.panel_browseEateryMenu);
             this.Controls.Add(this.panel_browseEatery);
             this.Controls.Add(this.panel_newUser);
             this.Controls.Add(this.panel_auth);
-            this.Controls.Add(this.panel_menu);
-            this.Controls.Add(this.panel_mealInfo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_auth.ResumeLayout(false);
@@ -1310,26 +1333,10 @@
         private System.Windows.Forms.Label label_newUser_pass;
         private System.Windows.Forms.Label label_newUser_login;
         private System.Windows.Forms.Button button_newUser_return;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kkal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.ComboBox comboBox_browseEatery;
         private System.Windows.Forms.Label label_browseEatery_filter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kkalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button_browseEatery_filter;
         private System.Windows.Forms.TextBox textBox_browseEatery_value;
         private System.Windows.Forms.Button button_browseEatery;
@@ -1339,25 +1346,8 @@
         private System.Windows.Forms.Label label_choosenMeals_infoEateries;
         private System.Windows.Forms.Label label_choosenMeals_info;
         private System.Windows.Forms.DataGridView dataGridView_choosenMeals;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridView dataGridView_EatWhereMealIsAvail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.Button button_menu_toMain;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_forAdmin;
         private System.Windows.Forms.Button button_dislogin;
         private System.Windows.Forms.Button button_ruler;
@@ -1394,12 +1384,43 @@
         private System.Windows.Forms.Button button_browseEateryMenu_goBack;
         private System.Windows.Forms.Button button_menu_all;
         private System.Windows.Forms.Button button_menu_inStock;
-        private System.Windows.Forms.Label label_menu_eateryName;
+        private System.Windows.Forms.Label label_eatery_name;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button_favorite;
         private System.Windows.Forms.Panel panel_mealInfo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kkalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label_eatery_location;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label_eatery_type;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_eatery_description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eateryTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.Label label_meal_cost;
+        private System.Windows.Forms.Label label_meal_kkal;
+        private System.Windows.Forms.Label label_meal_type;
+        private System.Windows.Forms.Label label_meal_name;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button button_meal_deleteChoosen;
+        private System.Windows.Forms.Button button_meal_addChoosen;
     }
 }
 
