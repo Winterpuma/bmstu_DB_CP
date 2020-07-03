@@ -138,7 +138,7 @@ namespace AccessToDB
             List<Menu> res = new List<Menu>();
 
             var tmp = conn.ExecuteSelect(
-                "select mealName, eateryName, day, amount, state " +
+                "select mealName, eateryName, day, amount, state, Eatery.eateryID, Meal.mealID " +
                 "from ((Menu join Meal on Menu.mealID = Meal.mealID) join " +
                 "Eatery on Eatery.eateryID = Menu.eateryID) " +
                 "where Eatery.eateryID = '" + eateryID + "'");
@@ -150,6 +150,15 @@ namespace AccessToDB
             return res;
         }
 
-
+        public static Meal GetMealByID(Connector conn, string mealID)
+        {
+            var tmp = conn.ExecuteSelect(
+                "select * from Meal " +
+                "where mealID = '" + mealID + "'");
+            if (tmp.Count != 0)
+                return new Meal(tmp[0]);
+            else
+                return null;
+        }
     }
 }

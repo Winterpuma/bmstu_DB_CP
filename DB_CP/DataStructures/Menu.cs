@@ -3,14 +3,18 @@
     public class Menu
     {
         public string eateryName { set; get; }
+        public string eateryID;
         public string mealName { set; get; }
+        public string mealID;
         public int day { set; get; }
         public int amount { get; set; }
         public string state { get; set; }
 
-        public Menu(string eateryname, string mealname, int day,
+        public Menu(string eateryID, string mealID, string eateryname, string mealname, int day,
             string state = "", int amount = 0)
         {
+            this.eateryID = eateryID;
+            this.mealID = mealID;
             mealName = mealname;
             eateryName = eateryname;
             this.day = day;
@@ -32,6 +36,8 @@
                 amount = (int)data[3];
             if (data[4] != System.DBNull.Value)
                 state = data[4].ToString();
+            eateryID = data[5].ToString();
+            mealID = data[6].ToString();
         }
     }
 }
