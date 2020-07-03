@@ -22,5 +22,18 @@ namespace AccessToDB
 
             return tmp.Count == 0 ? false : true;
         }
+
+        /// <summary>
+        /// Проверяет добавлено ли блюдо в избранное
+        /// </summary>
+        /// <returns>true - добавлено, false - отсутствует</returns>
+        public static bool IsMealChoosen(Connector conn, string userID, string mealID)
+        {
+            var tmp = conn.ExecuteSelect(
+                "select * from ChoosenMeals " +
+                "where userID = '" + userID + "' and mealID = '" + mealID + "'");
+
+            return tmp.Count == 0 ? false : true;
+        }
     }
 }

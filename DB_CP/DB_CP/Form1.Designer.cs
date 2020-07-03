@@ -87,10 +87,10 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_forAdmin = new System.Windows.Forms.Button();
             this.button_dislogin = new System.Windows.Forms.Button();
-            this.button_ruler = new System.Windows.Forms.Button();
             this.panel_admin = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button_admin_back = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView_usersForAdmin = new System.Windows.Forms.DataGridView();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,22 +99,7 @@
             this.r = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel_ruler = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView_ruler_menu = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label_ruler_info = new System.Windows.Forms.Label();
-            this.button_ruler_goBack = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView_eateryRuler = new System.Windows.Forms.DataGridView();
-            this.eateryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eateryTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_auth_guest = new System.Windows.Forms.Button();
             this.panel_menu_auth = new System.Windows.Forms.Panel();
             this.panel_menu = new System.Windows.Forms.Panel();
@@ -134,12 +119,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button_browseEateryMenu_goBack = new System.Windows.Forms.Button();
             this.panel_mealInfo = new System.Windows.Forms.Panel();
+            this.button_saveMealEdit = new System.Windows.Forms.Button();
+            this.button_cancelMealEdit = new System.Windows.Forms.Button();
+            this.panel_meal_dataChange = new System.Windows.Forms.Panel();
+            this.textBox_mealChange_cost = new System.Windows.Forms.TextBox();
+            this.textBox_mealChange_kkal = new System.Windows.Forms.TextBox();
+            this.textBox_mealChange_type = new System.Windows.Forms.TextBox();
+            this.textBox_mealChange_name = new System.Windows.Forms.TextBox();
+            this.panel_meal_dataInfo = new System.Windows.Forms.Panel();
+            this.label_meal_name = new System.Windows.Forms.Label();
+            this.label_meal_type = new System.Windows.Forms.Label();
+            this.label_meal_kkal = new System.Windows.Forms.Label();
+            this.label_meal_cost = new System.Windows.Forms.Label();
+            this.button_ruler = new System.Windows.Forms.Button();
             this.button_meal_deleteChoosen = new System.Windows.Forms.Button();
             this.button_meal_addChoosen = new System.Windows.Forms.Button();
-            this.label_meal_cost = new System.Windows.Forms.Label();
-            this.label_meal_kkal = new System.Windows.Forms.Label();
-            this.label_meal_type = new System.Windows.Forms.Label();
-            this.label_meal_name = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -158,14 +152,13 @@
             this.panel_admin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usersForAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            this.panel_ruler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ruler_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).BeginInit();
             this.panel_menu_auth.SuspendLayout();
             this.panel_menu.SuspendLayout();
             this.panel_browseEateryMenu.SuspendLayout();
             this.panel_mealInfo.SuspendLayout();
+            this.panel_meal_dataChange.SuspendLayout();
+            this.panel_meal_dataInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_auth
@@ -688,7 +681,7 @@
             // 
             // button_forAdmin
             // 
-            this.button_forAdmin.Location = new System.Drawing.Point(33, 341);
+            this.button_forAdmin.Location = new System.Drawing.Point(33, 304);
             this.button_forAdmin.Name = "button_forAdmin";
             this.button_forAdmin.Size = new System.Drawing.Size(140, 35);
             this.button_forAdmin.TabIndex = 19;
@@ -705,56 +698,54 @@
             this.button_dislogin.TabIndex = 20;
             this.button_dislogin.Text = "Выйти";
             this.button_dislogin.UseVisualStyleBackColor = true;
-            this.button_dislogin.Visible = false;
             this.button_dislogin.Click += new System.EventHandler(this.button_dislogin_Click);
-            // 
-            // button_ruler
-            // 
-            this.button_ruler.Location = new System.Drawing.Point(33, 297);
-            this.button_ruler.Name = "button_ruler";
-            this.button_ruler.Size = new System.Drawing.Size(140, 35);
-            this.button_ruler.TabIndex = 21;
-            this.button_ruler.Text = "Управляющий";
-            this.button_ruler.UseVisualStyleBackColor = true;
-            this.button_ruler.Visible = false;
-            this.button_ruler.Click += new System.EventHandler(this.button_ruler_Click);
             // 
             // panel_admin
             // 
+            this.panel_admin.Controls.Add(this.label3);
+            this.panel_admin.Controls.Add(this.label2);
             this.panel_admin.Controls.Add(this.label5);
-            this.panel_admin.Controls.Add(this.button_admin_back);
             this.panel_admin.Controls.Add(this.label4);
             this.panel_admin.Controls.Add(this.dataGridView_usersForAdmin);
-            this.panel_admin.Location = new System.Drawing.Point(949, 364);
+            this.panel_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_admin.Location = new System.Drawing.Point(20, 20);
             this.panel_admin.Name = "panel_admin";
-            this.panel_admin.Size = new System.Drawing.Size(978, 381);
+            this.panel_admin.Size = new System.Drawing.Size(700, 500);
             this.panel_admin.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(369, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 20);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "на нужное поле u/r/a";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(369, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(241, 20);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Для изменения прав нажмите ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 35);
+            this.label5.Location = new System.Drawing.Point(35, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 13);
+            this.label5.Size = new System.Drawing.Size(331, 20);
             this.label5.TabIndex = 21;
             this.label5.Text = "Страница изменения прав пользователей";
-            // 
-            // button_admin_back
-            // 
-            this.button_admin_back.Location = new System.Drawing.Point(39, 30);
-            this.button_admin_back.Name = "button_admin_back";
-            this.button_admin_back.Size = new System.Drawing.Size(75, 23);
-            this.button_admin_back.TabIndex = 18;
-            this.button_admin_back.Text = "Назад";
-            this.button_admin_back.UseVisualStyleBackColor = true;
-            this.button_admin_back.Click += new System.EventHandler(this.button_admin_back_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(584, 344);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 16;
             // 
             // dataGridView_usersForAdmin
@@ -770,7 +761,7 @@
             this.dataGridView_usersForAdmin.DataSource = this.bindingSource2;
             this.dataGridView_usersForAdmin.Location = new System.Drawing.Point(39, 86);
             this.dataGridView_usersForAdmin.Name = "dataGridView_usersForAdmin";
-            this.dataGridView_usersForAdmin.Size = new System.Drawing.Size(305, 222);
+            this.dataGridView_usersForAdmin.Size = new System.Drawing.Size(310, 370);
             this.dataGridView_usersForAdmin.TabIndex = 9;
             this.dataGridView_usersForAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_usersForAdmin_CellDoubleClick);
             // 
@@ -812,137 +803,9 @@
             // 
             this.bindingSource2.DataSource = typeof(DataStructures.User);
             // 
-            // panel_ruler
-            // 
-            this.panel_ruler.Controls.Add(this.button1);
-            this.panel_ruler.Controls.Add(this.dataGridView_ruler_menu);
-            this.panel_ruler.Controls.Add(this.label_ruler_info);
-            this.panel_ruler.Controls.Add(this.button_ruler_goBack);
-            this.panel_ruler.Controls.Add(this.label3);
-            this.panel_ruler.Controls.Add(this.dataGridView_eateryRuler);
-            this.panel_ruler.Location = new System.Drawing.Point(946, 399);
-            this.panel_ruler.Name = "panel_ruler";
-            this.panel_ruler.Size = new System.Drawing.Size(978, 381);
-            this.panel_ruler.TabIndex = 21;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(452, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView_ruler_menu
-            // 
-            this.dataGridView_ruler_menu.AutoGenerateColumns = false;
-            this.dataGridView_ruler_menu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ruler_menu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn18,
-            this.dayDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn});
-            this.dataGridView_ruler_menu.DataSource = this.menuBindingSource;
-            this.dataGridView_ruler_menu.Location = new System.Drawing.Point(507, 86);
-            this.dataGridView_ruler_menu.Name = "dataGridView_ruler_menu";
-            this.dataGridView_ruler_menu.Size = new System.Drawing.Size(458, 222);
-            this.dataGridView_ruler_menu.TabIndex = 20;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn18.HeaderText = "mealName";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
             // menuBindingSource
             // 
             this.menuBindingSource.DataSource = typeof(DataStructures.Menu);
-            // 
-            // label_ruler_info
-            // 
-            this.label_ruler_info.AutoSize = true;
-            this.label_ruler_info.Location = new System.Drawing.Point(142, 39);
-            this.label_ruler_info.Name = "label_ruler_info";
-            this.label_ruler_info.Size = new System.Drawing.Size(195, 13);
-            this.label_ruler_info.TabIndex = 19;
-            this.label_ruler_info.Text = "Страница изменения меню питалень";
-            // 
-            // button_ruler_goBack
-            // 
-            this.button_ruler_goBack.Location = new System.Drawing.Point(39, 30);
-            this.button_ruler_goBack.Name = "button_ruler_goBack";
-            this.button_ruler_goBack.Size = new System.Drawing.Size(75, 23);
-            this.button_ruler_goBack.TabIndex = 18;
-            this.button_ruler_goBack.Text = "Назад";
-            this.button_ruler_goBack.UseVisualStyleBackColor = true;
-            this.button_ruler_goBack.Click += new System.EventHandler(this.button_ruler_goBack_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(584, 344);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 16;
-            // 
-            // dataGridView_eateryRuler
-            // 
-            this.dataGridView_eateryRuler.AutoGenerateColumns = false;
-            this.dataGridView_eateryRuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_eateryRuler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.eateryNameDataGridViewTextBoxColumn1,
-            this.locationDataGridViewTextBoxColumn1,
-            this.descriptionDataGridViewTextBoxColumn1,
-            this.eateryTypeDataGridViewTextBoxColumn1});
-            this.dataGridView_eateryRuler.DataSource = this.myBindingSource;
-            this.dataGridView_eateryRuler.Location = new System.Drawing.Point(39, 86);
-            this.dataGridView_eateryRuler.Name = "dataGridView_eateryRuler";
-            this.dataGridView_eateryRuler.Size = new System.Drawing.Size(448, 222);
-            this.dataGridView_eateryRuler.TabIndex = 9;
-            this.dataGridView_eateryRuler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_eateryRuler_CellClick);
-            // 
-            // eateryNameDataGridViewTextBoxColumn1
-            // 
-            this.eateryNameDataGridViewTextBoxColumn1.DataPropertyName = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn1.HeaderText = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn1.Name = "eateryNameDataGridViewTextBoxColumn1";
-            // 
-            // locationDataGridViewTextBoxColumn1
-            // 
-            this.locationDataGridViewTextBoxColumn1.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn1.HeaderText = "location";
-            this.locationDataGridViewTextBoxColumn1.Name = "locationDataGridViewTextBoxColumn1";
-            // 
-            // descriptionDataGridViewTextBoxColumn1
-            // 
-            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            // 
-            // eateryTypeDataGridViewTextBoxColumn1
-            // 
-            this.eateryTypeDataGridViewTextBoxColumn1.DataPropertyName = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn1.HeaderText = "eateryType";
-            this.eateryTypeDataGridViewTextBoxColumn1.Name = "eateryTypeDataGridViewTextBoxColumn1";
             // 
             // button_auth_guest
             // 
@@ -969,7 +832,6 @@
             this.panel_menu.Controls.Add(this.button_favorite);
             this.panel_menu.Controls.Add(this.button_menu_toMain);
             this.panel_menu.Controls.Add(this.button_dislogin);
-            this.panel_menu.Controls.Add(this.button_ruler);
             this.panel_menu.Controls.Add(this.button_forAdmin);
             this.panel_menu.Controls.Add(this.label_browse_username);
             this.panel_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1133,12 +995,11 @@
             // 
             // panel_mealInfo
             // 
+            this.panel_mealInfo.Controls.Add(this.button_saveMealEdit);
+            this.panel_mealInfo.Controls.Add(this.button_cancelMealEdit);
+            this.panel_mealInfo.Controls.Add(this.button_ruler);
             this.panel_mealInfo.Controls.Add(this.button_meal_deleteChoosen);
             this.panel_mealInfo.Controls.Add(this.button_meal_addChoosen);
-            this.panel_mealInfo.Controls.Add(this.label_meal_cost);
-            this.panel_mealInfo.Controls.Add(this.label_meal_kkal);
-            this.panel_mealInfo.Controls.Add(this.label_meal_type);
-            this.panel_mealInfo.Controls.Add(this.label_meal_name);
             this.panel_mealInfo.Controls.Add(this.label17);
             this.panel_mealInfo.Controls.Add(this.label16);
             this.panel_mealInfo.Controls.Add(this.label15);
@@ -1146,65 +1007,156 @@
             this.panel_mealInfo.Controls.Add(this.label8);
             this.panel_mealInfo.Controls.Add(this.dataGridView_EatWhereMealIsAvail);
             this.panel_mealInfo.Controls.Add(this.label_choosenMeals_infoEateries);
+            this.panel_mealInfo.Controls.Add(this.panel_meal_dataInfo);
+            this.panel_mealInfo.Controls.Add(this.panel_meal_dataChange);
             this.panel_mealInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_mealInfo.Location = new System.Drawing.Point(20, 20);
             this.panel_mealInfo.Name = "panel_mealInfo";
             this.panel_mealInfo.Size = new System.Drawing.Size(700, 500);
             this.panel_mealInfo.TabIndex = 25;
             // 
-            // button_meal_deleteChoosen
+            // button_saveMealEdit
             // 
-            this.button_meal_deleteChoosen.Location = new System.Drawing.Point(416, 95);
-            this.button_meal_deleteChoosen.Name = "button_meal_deleteChoosen";
-            this.button_meal_deleteChoosen.Size = new System.Drawing.Size(219, 31);
-            this.button_meal_deleteChoosen.TabIndex = 20;
-            this.button_meal_deleteChoosen.Text = "Удалить из избранного";
-            this.button_meal_deleteChoosen.UseVisualStyleBackColor = true;
+            this.button_saveMealEdit.Location = new System.Drawing.Point(506, 212);
+            this.button_saveMealEdit.Name = "button_saveMealEdit";
+            this.button_saveMealEdit.Size = new System.Drawing.Size(129, 30);
+            this.button_saveMealEdit.TabIndex = 26;
+            this.button_saveMealEdit.Text = "Сохранить";
+            this.button_saveMealEdit.UseVisualStyleBackColor = true;
+            this.button_saveMealEdit.Visible = false;
+            this.button_saveMealEdit.Click += new System.EventHandler(this.button_saveMealEdit_Click);
             // 
-            // button_meal_addChoosen
+            // button_cancelMealEdit
             // 
-            this.button_meal_addChoosen.Location = new System.Drawing.Point(416, 58);
-            this.button_meal_addChoosen.Name = "button_meal_addChoosen";
-            this.button_meal_addChoosen.Size = new System.Drawing.Size(219, 31);
-            this.button_meal_addChoosen.TabIndex = 19;
-            this.button_meal_addChoosen.Text = "Добавить в избранное";
-            this.button_meal_addChoosen.UseVisualStyleBackColor = true;
+            this.button_cancelMealEdit.Location = new System.Drawing.Point(506, 177);
+            this.button_cancelMealEdit.Name = "button_cancelMealEdit";
+            this.button_cancelMealEdit.Size = new System.Drawing.Size(129, 30);
+            this.button_cancelMealEdit.TabIndex = 25;
+            this.button_cancelMealEdit.Text = "Отменить";
+            this.button_cancelMealEdit.UseVisualStyleBackColor = true;
+            this.button_cancelMealEdit.Visible = false;
+            this.button_cancelMealEdit.Click += new System.EventHandler(this.FinishEditingMeal);
             // 
-            // label_meal_cost
+            // panel_meal_dataChange
             // 
-            this.label_meal_cost.AutoSize = true;
-            this.label_meal_cost.Location = new System.Drawing.Point(230, 197);
-            this.label_meal_cost.Name = "label_meal_cost";
-            this.label_meal_cost.Size = new System.Drawing.Size(39, 20);
-            this.label_meal_cost.TabIndex = 18;
-            this.label_meal_cost.Text = "cost";
+            this.panel_meal_dataChange.Controls.Add(this.textBox_mealChange_cost);
+            this.panel_meal_dataChange.Controls.Add(this.textBox_mealChange_kkal);
+            this.panel_meal_dataChange.Controls.Add(this.textBox_mealChange_type);
+            this.panel_meal_dataChange.Controls.Add(this.textBox_mealChange_name);
+            this.panel_meal_dataChange.Location = new System.Drawing.Point(210, 100);
+            this.panel_meal_dataChange.Name = "panel_meal_dataChange";
+            this.panel_meal_dataChange.Size = new System.Drawing.Size(199, 129);
+            this.panel_meal_dataChange.TabIndex = 24;
             // 
-            // label_meal_kkal
+            // textBox_mealChange_cost
             // 
-            this.label_meal_kkal.AutoSize = true;
-            this.label_meal_kkal.Location = new System.Drawing.Point(228, 170);
-            this.label_meal_kkal.Name = "label_meal_kkal";
-            this.label_meal_kkal.Size = new System.Drawing.Size(37, 20);
-            this.label_meal_kkal.TabIndex = 17;
-            this.label_meal_kkal.Text = "kkal";
+            this.textBox_mealChange_cost.Location = new System.Drawing.Point(15, 93);
+            this.textBox_mealChange_cost.Name = "textBox_mealChange_cost";
+            this.textBox_mealChange_cost.Size = new System.Drawing.Size(138, 26);
+            this.textBox_mealChange_cost.TabIndex = 25;
+            this.textBox_mealChange_cost.Text = "cost";
+            // 
+            // textBox_mealChange_kkal
+            // 
+            this.textBox_mealChange_kkal.Location = new System.Drawing.Point(15, 63);
+            this.textBox_mealChange_kkal.Name = "textBox_mealChange_kkal";
+            this.textBox_mealChange_kkal.Size = new System.Drawing.Size(138, 26);
+            this.textBox_mealChange_kkal.TabIndex = 24;
+            this.textBox_mealChange_kkal.Text = "kkal";
+            // 
+            // textBox_mealChange_type
+            // 
+            this.textBox_mealChange_type.Location = new System.Drawing.Point(15, 35);
+            this.textBox_mealChange_type.Name = "textBox_mealChange_type";
+            this.textBox_mealChange_type.Size = new System.Drawing.Size(138, 26);
+            this.textBox_mealChange_type.TabIndex = 23;
+            this.textBox_mealChange_type.Text = "type";
+            // 
+            // textBox_mealChange_name
+            // 
+            this.textBox_mealChange_name.Location = new System.Drawing.Point(15, 5);
+            this.textBox_mealChange_name.Name = "textBox_mealChange_name";
+            this.textBox_mealChange_name.Size = new System.Drawing.Size(138, 26);
+            this.textBox_mealChange_name.TabIndex = 22;
+            this.textBox_mealChange_name.Text = "name";
+            // 
+            // panel_meal_dataInfo
+            // 
+            this.panel_meal_dataInfo.Controls.Add(this.label_meal_name);
+            this.panel_meal_dataInfo.Controls.Add(this.label_meal_type);
+            this.panel_meal_dataInfo.Controls.Add(this.label_meal_kkal);
+            this.panel_meal_dataInfo.Controls.Add(this.label_meal_cost);
+            this.panel_meal_dataInfo.Location = new System.Drawing.Point(210, 100);
+            this.panel_meal_dataInfo.Name = "panel_meal_dataInfo";
+            this.panel_meal_dataInfo.Size = new System.Drawing.Size(199, 129);
+            this.panel_meal_dataInfo.TabIndex = 23;
+            // 
+            // label_meal_name
+            // 
+            this.label_meal_name.AutoSize = true;
+            this.label_meal_name.Location = new System.Drawing.Point(21, 12);
+            this.label_meal_name.Name = "label_meal_name";
+            this.label_meal_name.Size = new System.Drawing.Size(49, 20);
+            this.label_meal_name.TabIndex = 15;
+            this.label_meal_name.Text = "name";
             // 
             // label_meal_type
             // 
             this.label_meal_type.AutoSize = true;
-            this.label_meal_type.Location = new System.Drawing.Point(227, 141);
+            this.label_meal_type.Location = new System.Drawing.Point(21, 42);
             this.label_meal_type.Name = "label_meal_type";
             this.label_meal_type.Size = new System.Drawing.Size(39, 20);
             this.label_meal_type.TabIndex = 16;
             this.label_meal_type.Text = "type";
             // 
-            // label_meal_name
+            // label_meal_kkal
             // 
-            this.label_meal_name.AutoSize = true;
-            this.label_meal_name.Location = new System.Drawing.Point(227, 111);
-            this.label_meal_name.Name = "label_meal_name";
-            this.label_meal_name.Size = new System.Drawing.Size(49, 20);
-            this.label_meal_name.TabIndex = 15;
-            this.label_meal_name.Text = "name";
+            this.label_meal_kkal.AutoSize = true;
+            this.label_meal_kkal.Location = new System.Drawing.Point(22, 71);
+            this.label_meal_kkal.Name = "label_meal_kkal";
+            this.label_meal_kkal.Size = new System.Drawing.Size(37, 20);
+            this.label_meal_kkal.TabIndex = 17;
+            this.label_meal_kkal.Text = "kkal";
+            // 
+            // label_meal_cost
+            // 
+            this.label_meal_cost.AutoSize = true;
+            this.label_meal_cost.Location = new System.Drawing.Point(22, 96);
+            this.label_meal_cost.Name = "label_meal_cost";
+            this.label_meal_cost.Size = new System.Drawing.Size(39, 20);
+            this.label_meal_cost.TabIndex = 18;
+            this.label_meal_cost.Text = "cost";
+            // 
+            // button_ruler
+            // 
+            this.button_ruler.Location = new System.Drawing.Point(506, 141);
+            this.button_ruler.Name = "button_ruler";
+            this.button_ruler.Size = new System.Drawing.Size(129, 30);
+            this.button_ruler.TabIndex = 21;
+            this.button_ruler.Text = "Изменить";
+            this.button_ruler.UseVisualStyleBackColor = true;
+            this.button_ruler.Visible = false;
+            this.button_ruler.Click += new System.EventHandler(this.button_ruler_Click);
+            // 
+            // button_meal_deleteChoosen
+            // 
+            this.button_meal_deleteChoosen.Location = new System.Drawing.Point(416, 95);
+            this.button_meal_deleteChoosen.Name = "button_meal_deleteChoosen";
+            this.button_meal_deleteChoosen.Size = new System.Drawing.Size(219, 30);
+            this.button_meal_deleteChoosen.TabIndex = 20;
+            this.button_meal_deleteChoosen.Text = "Удалить из избранного";
+            this.button_meal_deleteChoosen.UseVisualStyleBackColor = true;
+            this.button_meal_deleteChoosen.Click += new System.EventHandler(this.button_meal_deleteChoosen_Click);
+            // 
+            // button_meal_addChoosen
+            // 
+            this.button_meal_addChoosen.Location = new System.Drawing.Point(416, 58);
+            this.button_meal_addChoosen.Name = "button_meal_addChoosen";
+            this.button_meal_addChoosen.Size = new System.Drawing.Size(219, 30);
+            this.button_meal_addChoosen.TabIndex = 19;
+            this.button_meal_addChoosen.Text = "Добавить в избранное";
+            this.button_meal_addChoosen.UseVisualStyleBackColor = true;
+            this.button_meal_addChoosen.Click += new System.EventHandler(this.button_meal_addChoosen_Click);
             // 
             // label17
             // 
@@ -1255,17 +1207,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 534);
-            this.Controls.Add(this.panel_ruler);
-            this.Controls.Add(this.panel_admin);
-            this.Controls.Add(this.panel_menu_auth);
+            this.ClientSize = new System.Drawing.Size(1099, 534);
             this.Controls.Add(this.panel_menu);
+            this.Controls.Add(this.panel_menu_auth);
             this.Controls.Add(this.panel_mealInfo);
             this.Controls.Add(this.panel_choosenMeals);
             this.Controls.Add(this.panel_browseEateryMenu);
             this.Controls.Add(this.panel_browseEatery);
             this.Controls.Add(this.panel_newUser);
             this.Controls.Add(this.panel_auth);
+            this.Controls.Add(this.panel_admin);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_auth.ResumeLayout(false);
@@ -1286,11 +1237,7 @@
             this.panel_admin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usersForAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            this.panel_ruler.ResumeLayout(false);
-            this.panel_ruler.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ruler_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eateryRuler)).EndInit();
             this.panel_menu_auth.ResumeLayout(false);
             this.panel_menu.ResumeLayout(false);
             this.panel_menu.PerformLayout();
@@ -1298,6 +1245,10 @@
             this.panel_browseEateryMenu.PerformLayout();
             this.panel_mealInfo.ResumeLayout(false);
             this.panel_mealInfo.PerformLayout();
+            this.panel_meal_dataChange.ResumeLayout(false);
+            this.panel_meal_dataChange.PerformLayout();
+            this.panel_meal_dataInfo.ResumeLayout(false);
+            this.panel_meal_dataInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1350,9 +1301,7 @@
         private System.Windows.Forms.Button button_menu_toMain;
         private System.Windows.Forms.Button button_forAdmin;
         private System.Windows.Forms.Button button_dislogin;
-        private System.Windows.Forms.Button button_ruler;
         private System.Windows.Forms.Panel panel_admin;
-        private System.Windows.Forms.Button button_admin_back;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView_usersForAdmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
@@ -1360,28 +1309,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn u;
         private System.Windows.Forms.DataGridViewTextBoxColumn r;
         private System.Windows.Forms.DataGridViewTextBoxColumn a;
-        private System.Windows.Forms.Panel panel_ruler;
-        private System.Windows.Forms.DataGridView dataGridView_ruler_menu;
-        private System.Windows.Forms.Label label_ruler_info;
-        private System.Windows.Forms.Button button_ruler_goBack;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView_eateryRuler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryTypeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource menuBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_auth_guest;
         private System.Windows.Forms.Panel panel_menu_auth;
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Panel panel_browseEateryMenu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_browseEateryMenu_goBack;
         private System.Windows.Forms.Button button_menu_all;
         private System.Windows.Forms.Button button_menu_inStock;
         private System.Windows.Forms.Label label_eatery_name;
@@ -1421,6 +1354,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button button_meal_deleteChoosen;
         private System.Windows.Forms.Button button_meal_addChoosen;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_ruler;
+        private System.Windows.Forms.Button button_browseEateryMenu_goBack;
+        private System.Windows.Forms.Button button_saveMealEdit;
+        private System.Windows.Forms.Button button_cancelMealEdit;
+        private System.Windows.Forms.Panel panel_meal_dataChange;
+        private System.Windows.Forms.TextBox textBox_mealChange_cost;
+        private System.Windows.Forms.TextBox textBox_mealChange_kkal;
+        private System.Windows.Forms.TextBox textBox_mealChange_type;
+        private System.Windows.Forms.TextBox textBox_mealChange_name;
+        private System.Windows.Forms.Panel panel_meal_dataInfo;
     }
 }
 

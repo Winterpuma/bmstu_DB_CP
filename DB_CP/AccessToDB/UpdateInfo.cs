@@ -33,5 +33,17 @@ namespace AccessToDB
                 "set permission = " + newPermissions + " " +
                 "where userID = '" + userID + "'");
         }
+
+        public static int UpdateMeal(Connector conn, string mealID, string newName, string newType, string newKkal, string newCost)
+        {
+            return conn.ExecuteNonQuery(
+                "update Meal " +
+                "set " +
+                "mealName = '" + newName + "', " +
+                "mealType = '" + newType + "', " +
+                "kkal = " + newKkal + "," +
+                "cost = " + newCost + " " +
+                "where mealID = '" + mealID + "'");
+        }
     }
 }

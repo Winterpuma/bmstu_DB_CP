@@ -19,6 +19,8 @@ namespace DB_CP
     {
         Connector connectDB = new Connector();
         User currentUser = null;
+        Eatery currentEatery = null;
+        Meal currentMeal = null;
         List<Eatery> currEateries = null;
         List<Meal> currMenu = null;
         List<User> allUsers = null;
@@ -132,7 +134,6 @@ namespace DB_CP
             currEateries = null;
             realMenu = null;
             allUsers = null;
-            button_dislogin.Visible = false;
             button_forAdmin.Visible = false;
             button_ruler.Visible = false;
             label_browse_username.Visible = false;
@@ -149,6 +150,7 @@ namespace DB_CP
             myBindingSource.Clear();
             label_browse_username.Text = "Имя пользователя:\n" + currentUser.login;
             label_browse_username.Visible = true;
+            panel_menu.BringToFront();
             panel_browseEatery.BringToFront();
             currEateries = GetInfo.GetAllEatery(connectDB);
             foreach (Eatery eat in currEateries)
@@ -300,12 +302,7 @@ namespace DB_CP
             foreach (Eatery eat in currEateries)
                 myBindingSource.Add(eat);
         }
-
-        private void button_ruler_Click(object sender, EventArgs e)
-        {
-            LoadRulerEateries();
-            panel_ruler.BringToFront();
-        }
+        
 
         private void button_ruler_goBack_Click(object sender, EventArgs e)
         {
@@ -346,6 +343,7 @@ namespace DB_CP
 
         private void LoadMealPanel(Meal m)
         {
+            currentMeal = m;
 
             label_meal_name.Text = m.mealName;
             label_meal_type.Text = m.mealType;
@@ -357,7 +355,81 @@ namespace DB_CP
             foreach (Eatery eat in currEateries)
                 myBindingSource.Add(eat);
 
+            if (CheckInfo.IsMealChoosen(connectDB, currentUser.userID, m.mealID))
+            {
+                button_meal_deleteChoosen.Visible = true;
+                button_meal_addChoosen.Visible = false;
+            }
+            else
+            {
+                button_meal_deleteChoosen.Visible = false;
+                button_meal_addChoosen.Visible = true;
+            }
+
             panel_mealInfo.BringToFront();
+        }
+
+        private void button_meal_addChoosen_Click(object sender, EventArgs e)
+        {
+            InsertInfo.InsertMealChoosen(connectDB, currentUser.userID, currentMeal.mealID);
+            button_meal_addChoosen.Visible = false;
+            button_meal_deleteChoosen.Visible = true;
+        }
+
+        private void button_meal_deleteChoosen_Click(object sender, EventArgs e)
+        {
+            DeleteInfo.DeleteMealChoosen(connectDB, currentUser.userID, currentMeal.mealID);
+            button_meal_addChoosen.Visible = true;
+            button_meal_deleteChoosen.Visible = false;
+        }
+
+        /// <summary>
+        /// Для изменения блюда
+        /// </summary>
+        private void button_ruler_Click(object sender, EventArgs e)
+        {
+            textBox_mealChange_name.Text = currentMeal.mealName.TrimEnd(' ');
+            textBox_mealChange_type.Text = currentMeal.mealType.TrimEnd(' ');
+            textBox_mealChange_kkal.Text = currentMeal.kkal.ToString();
+            textBox_mealChange_cost.Text = currentMeal.cost.ToString();
+
+            panel_meal_dataChange.BringToFront();
+            button_cancelMealEdit.Visible = true;
+            button_saveMealEdit.Visible = true;
+            button_ruler.Visible = false;
+        }
+
+        /// <summary>
+        /// Отмена изменения блюда
+        /// </summary>
+        private void FinishEditingMeal(object sender, EventArgs e)
+        {
+            textBox_mealChange_name.Text = "";
+            textBox_mealChange_type.Text = "";
+            textBox_mealChange_kkal.Text = "";
+            textBox_mealChange_cost.Text = "";
+
+            button_cancelMealEdit.Visible = false;
+            button_saveMealEdit.Visible = false;
+            button_ruler.Visible = true;
+
+            panel_meal_dataInfo.BringToFront();
+        }
+
+        private void button_saveMealEdit_Click(object sender, EventArgs e)
+        {
+            UpdateInfo.UpdateMeal(connectDB, currentMeal.mealID,
+                textBox_mealChange_name.Text,
+                textBox_mealChange_type.Text,
+                textBox_mealChange_kkal.Text,
+                textBox_mealChange_cost.Text);
+
+            label_meal_name.Text = textBox_mealChange_name.Text;
+            label_meal_type.Text = textBox_mealChange_type.Text;
+            label_meal_kkal.Text = textBox_mealChange_kkal.Text;
+            label_meal_cost.Text = textBox_mealChange_cost.Text;
+            
+            FinishEditingMeal(null, null);
         }
     }
 }
