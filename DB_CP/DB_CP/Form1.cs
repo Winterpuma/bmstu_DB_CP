@@ -33,6 +33,7 @@ namespace DB_CP
             panel_menu_auth.BringToFront();
         }
 
+
         #region Авторизация
 
         /// <summary>
@@ -143,6 +144,7 @@ namespace DB_CP
         }
         #endregion
 
+
         #region Страница со списком столовых
         private void LoadBrowseEateryPanel()
         {
@@ -175,7 +177,36 @@ namespace DB_CP
             foreach (Eatery eat in currEateries)
                 eateryBindingSource.Add(eat);
         }
+
+        private void button_browseEateryMenu_goBack_Click(object sender, EventArgs e)
+        {
+            LoadBrowseEateryPanel();
+        }
+
+        private void button_menu_inStock_Click(object sender, EventArgs e)
+        {
+            menuBindingSource.Clear();
+            realMenu = GetInfo.GetMenuState(connectDB, currentEatery.eateryID, "В наличии");
+            foreach (DataStructures.Menu m in realMenu)
+                menuBindingSource.Add(m);
+        }
+
+        private void button_menu_all_Click(object sender, EventArgs e)
+        {
+            menuBindingSource.Clear();
+            realMenu = GetInfo.GetMenu(connectDB, currentEatery.eateryID);
+            foreach (DataStructures.Menu m in realMenu)
+                menuBindingSource.Add(m);
+        }
+
+        private void button_auth_guest_Click(object sender, EventArgs e)
+        {
+            currentUser = new User("-2", "guest");
+            LoadBrowseEateryPanel();
+        }
+
         #endregion
+
 
         #region Страница конкретной столовой
         private void LoadEateryPanel(Eatery eatery)
@@ -185,6 +216,7 @@ namespace DB_CP
             label_eatery_description.Text = eatery.description;
             label_eatery_type.Text = eatery.eateryType;
 
+            currentEatery = eatery;
             /*bindingSource1.Clear();
             currMenu = GetInfo.GetAllMealsOfEatery(connectDB, eatery.eateryID);
             foreach (Meal m in currMenu)
@@ -203,7 +235,15 @@ namespace DB_CP
             panel_browseEateryMenu.BringToFront();
         }
 
+
+        private void LoadMealClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ind = e.RowIndex;
+
+            LoadMealPanel(GetInfo.GetMealByID(connectDB, realMenu[ind].mealID));
+        }
         #endregion
+
 
         #region Избранные блюда
         private void AddToChoosen(object sender, DataGridViewCellEventArgs e)
@@ -258,6 +298,7 @@ namespace DB_CP
         }
         #endregion
 
+
         #region Admin
         private void adminUsersLoad()
         {
@@ -298,37 +339,9 @@ namespace DB_CP
             adminUsersLoad();
         }
         #endregion
-        
-        
+       
 
-        private void button_browseEateryMenu_goBack_Click(object sender, EventArgs e)
-        {
-            LoadBrowseEateryPanel();
-        }
-
-        private void button_menu_inStock_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_menu_all_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_auth_guest_Click(object sender, EventArgs e)
-        {
-            currentUser = new User("-2", "guest");
-            LoadBrowseEateryPanel();
-        }
-
-        private void LoadMealClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int ind = e.RowIndex;
-
-            LoadMealPanel(GetInfo.GetMealByID(connectDB, realMenu[ind].mealID));
-        }
-
+        #region Страница блюда
         private void LoadMealPanel(Meal m)
         {
             currentMeal = m;
@@ -419,5 +432,6 @@ namespace DB_CP
             
             FinishEditingMeal(null, null);
         }
+        #endregion
     }
 }
