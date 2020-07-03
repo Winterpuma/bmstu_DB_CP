@@ -98,6 +98,8 @@ namespace DB_CP
                 InsertInfo.InsertUser(connectDB, login, pass);
                 currentUser = GetInfo.GetUserByLogin(connectDB, login, pass);
                 button_dislogin.Visible = true;
+                button_favorite.Visible = true;
+                CheckPerms();
                 LoadBrowseEateryPanel();
             }
         }

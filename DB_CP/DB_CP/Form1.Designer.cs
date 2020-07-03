@@ -54,6 +54,9 @@
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eateryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_Meals = new System.Windows.Forms.DataGridView();
+            this.mealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_browse_username = new System.Windows.Forms.Label();
             this.panel_newUser = new System.Windows.Forms.Panel();
@@ -135,9 +138,11 @@
             this.textBox_mealChange_kkal = new System.Windows.Forms.TextBox();
             this.textBox_mealChange_type = new System.Windows.Forms.TextBox();
             this.textBox_mealChange_name = new System.Windows.Forms.TextBox();
-            this.mealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eateryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).BeginInit();
@@ -397,13 +402,39 @@
             this.dataGridView_Meals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mealName,
             this.amount,
-            this.state});
+            this.state,
+            this.eateryNameDataGridViewTextBoxColumn1,
+            this.mealNameDataGridViewTextBoxColumn,
+            this.dayDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.stateDataGridViewTextBoxColumn});
             this.dataGridView_Meals.DataSource = this.menuBindingSource;
             this.dataGridView_Meals.Location = new System.Drawing.Point(30, 236);
             this.dataGridView_Meals.Name = "dataGridView_Meals";
             this.dataGridView_Meals.Size = new System.Drawing.Size(509, 211);
             this.dataGridView_Meals.TabIndex = 9;
             this.dataGridView_Meals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoadMealClick);
+            // 
+            // mealName
+            // 
+            this.mealName.DataPropertyName = "mealName";
+            this.mealName.HeaderText = "Название";
+            this.mealName.Name = "mealName";
+            this.mealName.Width = 200;
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "amount";
+            this.amount.HeaderText = "Количество";
+            this.amount.Name = "amount";
+            this.amount.Width = 110;
+            // 
+            // state
+            // 
+            this.state.DataPropertyName = "state";
+            this.state.HeaderText = "Состояние";
+            this.state.Name = "state";
+            this.state.Width = 150;
             // 
             // menuBindingSource
             // 
@@ -990,7 +1021,7 @@
             // 
             // button_saveMealEdit
             // 
-            this.button_saveMealEdit.Location = new System.Drawing.Point(506, 212);
+            this.button_saveMealEdit.Location = new System.Drawing.Point(506, 199);
             this.button_saveMealEdit.Name = "button_saveMealEdit";
             this.button_saveMealEdit.Size = new System.Drawing.Size(129, 30);
             this.button_saveMealEdit.TabIndex = 26;
@@ -1001,7 +1032,7 @@
             // 
             // button_cancelMealEdit
             // 
-            this.button_cancelMealEdit.Location = new System.Drawing.Point(506, 177);
+            this.button_cancelMealEdit.Location = new System.Drawing.Point(506, 158);
             this.button_cancelMealEdit.Name = "button_cancelMealEdit";
             this.button_cancelMealEdit.Size = new System.Drawing.Size(129, 30);
             this.button_cancelMealEdit.TabIndex = 25;
@@ -1012,7 +1043,7 @@
             // 
             // button_ruler
             // 
-            this.button_ruler.Location = new System.Drawing.Point(506, 141);
+            this.button_ruler.Location = new System.Drawing.Point(506, 117);
             this.button_ruler.Name = "button_ruler";
             this.button_ruler.Size = new System.Drawing.Size(129, 30);
             this.button_ruler.TabIndex = 21;
@@ -1023,7 +1054,7 @@
             // 
             // button_meal_deleteChoosen
             // 
-            this.button_meal_deleteChoosen.Location = new System.Drawing.Point(416, 95);
+            this.button_meal_deleteChoosen.Location = new System.Drawing.Point(416, 58);
             this.button_meal_deleteChoosen.Name = "button_meal_deleteChoosen";
             this.button_meal_deleteChoosen.Size = new System.Drawing.Size(219, 30);
             this.button_meal_deleteChoosen.TabIndex = 20;
@@ -1094,7 +1125,7 @@
             this.panel_meal_dataInfo.Controls.Add(this.label_meal_cost);
             this.panel_meal_dataInfo.Location = new System.Drawing.Point(210, 100);
             this.panel_meal_dataInfo.Name = "panel_meal_dataInfo";
-            this.panel_meal_dataInfo.Size = new System.Drawing.Size(199, 129);
+            this.panel_meal_dataInfo.Size = new System.Drawing.Size(261, 129);
             this.panel_meal_dataInfo.TabIndex = 23;
             // 
             // label_meal_name
@@ -1176,41 +1207,50 @@
             this.textBox_mealChange_name.TabIndex = 22;
             this.textBox_mealChange_name.Text = "name";
             // 
-            // mealName
+            // eateryNameDataGridViewTextBoxColumn1
             // 
-            this.mealName.DataPropertyName = "mealName";
-            this.mealName.HeaderText = "Название";
-            this.mealName.Name = "mealName";
-            this.mealName.Width = 200;
+            this.eateryNameDataGridViewTextBoxColumn1.DataPropertyName = "eateryName";
+            this.eateryNameDataGridViewTextBoxColumn1.HeaderText = "eateryName";
+            this.eateryNameDataGridViewTextBoxColumn1.Name = "eateryNameDataGridViewTextBoxColumn1";
             // 
-            // amount
+            // mealNameDataGridViewTextBoxColumn
             // 
-            this.amount.DataPropertyName = "amount";
-            this.amount.HeaderText = "Количество";
-            this.amount.Name = "amount";
-            this.amount.Width = 110;
+            this.mealNameDataGridViewTextBoxColumn.DataPropertyName = "mealName";
+            this.mealNameDataGridViewTextBoxColumn.HeaderText = "mealName";
+            this.mealNameDataGridViewTextBoxColumn.Name = "mealNameDataGridViewTextBoxColumn";
             // 
-            // state
+            // dayDataGridViewTextBoxColumn
             // 
-            this.state.DataPropertyName = "state";
-            this.state.HeaderText = "Состояние";
-            this.state.Name = "state";
-            this.state.Width = 150;
+            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
+            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
+            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 534);
+            this.ClientSize = new System.Drawing.Size(950, 534);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel_menu_auth);
+            this.Controls.Add(this.panel_mealInfo);
+            this.Controls.Add(this.panel_choosenMeals);
             this.Controls.Add(this.panel_browseEateryMenu);
             this.Controls.Add(this.panel_browseEatery);
             this.Controls.Add(this.panel_newUser);
             this.Controls.Add(this.panel_auth);
             this.Controls.Add(this.panel_admin);
-            this.Controls.Add(this.panel_mealInfo);
-            this.Controls.Add(this.panel_choosenMeals);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_auth.ResumeLayout(false);
@@ -1359,6 +1399,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mealName;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
     }
 }
 
