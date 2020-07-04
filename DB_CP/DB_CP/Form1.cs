@@ -203,7 +203,7 @@ namespace DB_CP
 
         private void button_auth_guest_Click(object sender, EventArgs e)
         {
-            currentUser = new User("-2", "guest");
+            currentUser = new User("-4", "guest");
             LoadBrowseEateryPanel();
         }
 
@@ -358,18 +358,35 @@ namespace DB_CP
             foreach (Eatery eat in currEateries)
                 eateryBindingSource.Add(eat);
 
-            if (CheckInfo.IsMealChoosen(connectDB, currentUser.userID, m.mealID))
+            if (!IsUserGuest(currentUser))
             {
-                button_meal_deleteChoosen.Visible = true;
-                button_meal_addChoosen.Visible = false;
+                if (CheckInfo.IsMealChoosen(connectDB, currentUser.userID, m.mealID))
+                {
+                    button_meal_deleteChoosen.Visible = true;
+                    button_meal_addChoosen.Visible = false;
+                }
+                else
+                {
+                    button_meal_deleteChoosen.Visible = false;
+                    button_meal_addChoosen.Visible = true;
+                }
             }
             else
             {
                 button_meal_deleteChoosen.Visible = false;
-                button_meal_addChoosen.Visible = true;
+                button_meal_addChoosen.Visible = false;
             }
+            
 
             panel_mealInfo.BringToFront();
+        }
+
+        private bool IsUserGuest(User u)
+        {
+            if (u.userID == "-4")
+                return true;
+            else
+                return false;
         }
 
         private void button_meal_addChoosen_Click(object sender, EventArgs e)
