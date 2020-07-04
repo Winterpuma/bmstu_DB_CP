@@ -39,6 +39,7 @@
             this.label_auth_login = new System.Windows.Forms.Label();
             this.button_auth_newUser = new System.Windows.Forms.Button();
             this.panel_browseEatery = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_browseEatery = new System.Windows.Forms.Button();
             this.label_browseEatery_insertInfo = new System.Windows.Forms.Label();
             this.button_browseEatery_filter = new System.Windows.Forms.Button();
@@ -143,6 +144,7 @@
             this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_MealBack = new System.Windows.Forms.Button();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).BeginInit();
@@ -255,6 +257,7 @@
             // 
             // panel_browseEatery
             // 
+            this.panel_browseEatery.Controls.Add(this.button1);
             this.panel_browseEatery.Controls.Add(this.button_browseEatery);
             this.panel_browseEatery.Controls.Add(this.label_browseEatery_insertInfo);
             this.panel_browseEatery.Controls.Add(this.button_browseEatery_filter);
@@ -270,6 +273,16 @@
             this.panel_browseEatery.Name = "panel_browseEatery";
             this.panel_browseEatery.Size = new System.Drawing.Size(700, 500);
             this.panel_browseEatery.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 27);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Сброс";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.LoadBrowseEateries_Click);
             // 
             // button_browseEatery
             // 
@@ -291,7 +304,7 @@
             // 
             // button_browseEatery_filter
             // 
-            this.button_browseEatery_filter.Location = new System.Drawing.Point(487, 453);
+            this.button_browseEatery_filter.Location = new System.Drawing.Point(352, 448);
             this.button_browseEatery_filter.Name = "button_browseEatery_filter";
             this.button_browseEatery_filter.Size = new System.Drawing.Size(148, 28);
             this.button_browseEatery_filter.TabIndex = 15;
@@ -301,7 +314,7 @@
             // 
             // textBox_browseEatery_value
             // 
-            this.textBox_browseEatery_value.Location = new System.Drawing.Point(333, 453);
+            this.textBox_browseEatery_value.Location = new System.Drawing.Point(210, 448);
             this.textBox_browseEatery_value.Name = "textBox_browseEatery_value";
             this.textBox_browseEatery_value.Size = new System.Drawing.Size(124, 26);
             this.textBox_browseEatery_value.TabIndex = 14;
@@ -312,7 +325,7 @@
             this.comboBox_browseEatery.Items.AddRange(new object[] {
             "location",
             "eateryType"});
-            this.comboBox_browseEatery.Location = new System.Drawing.Point(190, 451);
+            this.comboBox_browseEatery.Location = new System.Drawing.Point(65, 446);
             this.comboBox_browseEatery.Name = "comboBox_browseEatery";
             this.comboBox_browseEatery.Size = new System.Drawing.Size(121, 28);
             this.comboBox_browseEatery.TabIndex = 13;
@@ -641,7 +654,7 @@
             this.button_menu_toMain.TabIndex = 18;
             this.button_menu_toMain.Text = "Главная";
             this.button_menu_toMain.UseVisualStyleBackColor = true;
-            this.button_menu_toMain.Click += new System.EventHandler(this.button_choosenMeals_Click);
+            this.button_menu_toMain.Click += new System.EventHandler(this.LoadBrowseEateries_Click);
             // 
             // label_choosenMeals_infoEateries
             // 
@@ -999,6 +1012,7 @@
             // 
             // panel_mealInfo
             // 
+            this.panel_mealInfo.Controls.Add(this.button_MealBack);
             this.panel_mealInfo.Controls.Add(this.button_saveMealEdit);
             this.panel_mealInfo.Controls.Add(this.button_cancelMealEdit);
             this.panel_mealInfo.Controls.Add(this.button_ruler);
@@ -1111,7 +1125,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 58);
+            this.label8.Location = new System.Drawing.Point(38, 64);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 20);
             this.label8.TabIndex = 10;
@@ -1236,6 +1250,16 @@
             this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
             this.stateDataGridViewTextBoxColumn.HeaderText = "state";
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // button_MealBack
+            // 
+            this.button_MealBack.Location = new System.Drawing.Point(42, 26);
+            this.button_MealBack.Name = "button_MealBack";
+            this.button_MealBack.Size = new System.Drawing.Size(93, 29);
+            this.button_MealBack.TabIndex = 27;
+            this.button_MealBack.Text = "Назад";
+            this.button_MealBack.UseVisualStyleBackColor = true;
+            this.button_MealBack.Click += new System.EventHandler(this.button_MealBack_Click);
             // 
             // Form1
             // 
@@ -1399,11 +1423,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mealName;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mealNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_MealBack;
     }
 }
 

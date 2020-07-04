@@ -5,7 +5,7 @@
         public string userID;
         public string login { get; set; }
         public string perms { get; set; }
-        public int permission = -1;
+        public int permission = 2;
 
         public User(string id, string login, int permission = -1)
         {
@@ -34,7 +34,7 @@
     {
         admin = 0,
         ruler = 1,
-        user = -1,
-        user2 = 2
+        standard = -1,
+        user = 2
     }
 }

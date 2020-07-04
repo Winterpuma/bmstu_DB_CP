@@ -166,7 +166,8 @@ namespace DB_CP
         private void dataGridView_Eatery_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int ind = e.RowIndex;
-            LoadEateryPanel(currEateries[ind]);
+            if (ind != -1)
+                LoadEateryPanel(currEateries[ind]);
         }
 
         private void button_browseEatery_filter_Click(object sender, EventArgs e)
@@ -241,8 +242,8 @@ namespace DB_CP
         private void LoadMealClick(object sender, DataGridViewCellEventArgs e)
         {
             int ind = e.RowIndex;
-
-            LoadMealPanel(GetInfo.GetMealByID(connectDB, realMenu[ind].mealID));
+            if (ind != -1)
+                LoadMealPanel(GetInfo.GetMealByID(connectDB, realMenu[ind].mealID));
         }
         #endregion
 
@@ -275,7 +276,7 @@ namespace DB_CP
             currMenu.RemoveAt(ind);
         }
 
-        private void button_choosenMeals_Click(object sender, EventArgs e)
+        private void LoadBrowseEateries_Click(object sender, EventArgs e)
         {
             LoadBrowseEateryPanel();
             panel_browseEatery.BringToFront();
@@ -329,7 +330,7 @@ namespace DB_CP
             string newRole = "";
 
             if (e.ColumnIndex == 2)
-                newRole = "-1";
+                newRole = "2";
             else if (e.ColumnIndex == 3)
                 newRole = "1";
             else if (e.ColumnIndex == 4)
@@ -451,6 +452,12 @@ namespace DB_CP
             
             FinishEditingMeal(null, null);
         }
+        
+        private void button_MealBack_Click(object sender, EventArgs e)
+        {
+            LoadEateryPanel(currentEatery);
+        }
         #endregion
+
     }
 }

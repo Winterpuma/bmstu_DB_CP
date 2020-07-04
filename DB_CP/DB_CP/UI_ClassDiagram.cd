@@ -5,68 +5,41 @@
     <Members>
       <Field Name="a" Hidden="true" />
       <Field Name="amountDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="bindingSource1" Hidden="true" />
       <Field Name="bindingSource2" Hidden="true" />
-      <Field Name="button_admin_back" Hidden="true" />
       <Field Name="button_auth_check" Hidden="true" />
       <Field Name="button_auth_newUser" Hidden="true" />
       <Field Name="button_browseEatery" Hidden="true" />
       <Field Name="button_browseEatery_filter" Hidden="true" />
-      <Field Name="button_choosenMeals" Hidden="true" />
       <Field Name="button_dislogin" Hidden="true" />
       <Field Name="button_forAdmin" Hidden="true" />
       <Field Name="button_newUser_register" Hidden="true" />
       <Field Name="button_newUser_return" Hidden="true" />
       <Field Name="button_ruler" Hidden="true" />
-      <Field Name="button_ruler_goBack" Hidden="true" />
       <Field Name="comboBox_browseEatery" Hidden="true" />
       <Field Name="components" Hidden="true" />
-      <Field Name="cost" Hidden="true" />
-      <Field Name="costDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="dataGridView_choosenMeals" Hidden="true" />
       <Field Name="dataGridView_Eatery" Hidden="true" />
-      <Field Name="dataGridView_eateryRuler" Hidden="true" />
       <Field Name="dataGridView_EatWhereMealIsAvail" Hidden="true" />
       <Field Name="dataGridView_Meals" Hidden="true" />
-      <Field Name="dataGridView_ruler_menu" Hidden="true" />
       <Field Name="dataGridView_usersForAdmin" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn1" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn10" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn11" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn12" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn13" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn14" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn15" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn16" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn18" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn2" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn3" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn4" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn5" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn6" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn7" Hidden="true" />
       <Field Name="dataGridViewTextBoxColumn8" Hidden="true" />
-      <Field Name="dataGridViewTextBoxColumn9" Hidden="true" />
       <Field Name="dayDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="description" Hidden="true" />
-      <Field Name="descriptionDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="descriptionDataGridViewTextBoxColumn1" Hidden="true" />
       <Field Name="eateryIDDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="eateryName" Hidden="true" />
       <Field Name="eateryNameDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="eateryNameDataGridViewTextBoxColumn1" Hidden="true" />
-      <Field Name="eateryType" Hidden="true" />
       <Field Name="eateryTypeDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="eateryTypeDataGridViewTextBoxColumn1" Hidden="true" />
-      <Field Name="kkal" Hidden="true" />
-      <Field Name="kkalDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="label_auth_login" Hidden="true" />
       <Field Name="label_auth_pass" Hidden="true" />
       <Field Name="label_auth_res" Hidden="true" />
       <Field Name="label_auth_welcome" Hidden="true" />
       <Field Name="label_browse_username" Hidden="true" />
       <Field Name="label_browse_welcome" Hidden="true" />
-      <Field Name="label_browseEatery_addChoosenInfo" Hidden="true" />
       <Field Name="label_browseEatery_filter" Hidden="true" />
       <Field Name="label_browseEatery_insertInfo" Hidden="true" />
       <Field Name="label_browseEateryDescription1" Hidden="true" />
@@ -78,28 +51,21 @@
       <Field Name="label_newUser_pass" Hidden="true" />
       <Field Name="label_newUser_pass2" Hidden="true" />
       <Field Name="label_newUser_result" Hidden="true" />
-      <Field Name="label_ruler_info" Hidden="true" />
       <Field Name="label1" Hidden="true" />
       <Field Name="label2" Hidden="true" />
       <Field Name="label3" Hidden="true" />
       <Field Name="label4" Hidden="true" />
       <Field Name="label5" Hidden="true" />
-      <Field Name="location" Hidden="true" />
       <Field Name="locationDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="locationDataGridViewTextBoxColumn1" Hidden="true" />
       <Field Name="loginDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="mealName" Hidden="true" />
       <Field Name="mealNameDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="mealType" Hidden="true" />
-      <Field Name="mealTypeDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="menuBindingSource" Hidden="true" />
-      <Field Name="myBindingSource" Hidden="true" />
       <Field Name="panel_admin" Hidden="true" />
       <Field Name="panel_auth" Hidden="true" />
       <Field Name="panel_browseEatery" Hidden="true" />
       <Field Name="panel_choosenMeals" Hidden="true" />
       <Field Name="panel_newUser" Hidden="true" />
-      <Field Name="panel_ruler" Hidden="true" />
       <Field Name="perms" Hidden="true" />
       <Field Name="r" Hidden="true" />
       <Field Name="realMenu" Hidden="true" />
@@ -112,8 +78,11 @@
       <Field Name="textBox_newUser_pass2" Hidden="true" />
       <Field Name="u" Hidden="true" />
     </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>eCUV1wTilDkJGFrBKAKGUlwL/sJS4sixBEJFRZUCyjQ=</HashCode>
+      <HashCode>fyVFXTTAtDmJPNLRGELmYlRTvsLC6MylzAZBRJWgzrw=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
