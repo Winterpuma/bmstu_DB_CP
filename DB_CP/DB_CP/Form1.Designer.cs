@@ -55,9 +55,6 @@
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eateryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_Meals = new System.Windows.Forms.DataGridView();
-            this.mealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_browse_username = new System.Windows.Forms.Label();
             this.panel_newUser = new System.Windows.Forms.Panel();
@@ -75,10 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label_choosenMeals_info = new System.Windows.Forms.Label();
             this.dataGridView_choosenMeals = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mealbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button_menu_toMain = new System.Windows.Forms.Button();
             this.label_choosenMeals_infoEateries = new System.Windows.Forms.Label();
@@ -119,6 +112,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button_browseEateryMenu_goBack = new System.Windows.Forms.Button();
             this.panel_mealInfo = new System.Windows.Forms.Panel();
+            this.button_MealBack = new System.Windows.Forms.Button();
             this.button_saveMealEdit = new System.Windows.Forms.Button();
             this.button_cancelMealEdit = new System.Windows.Forms.Button();
             this.button_ruler = new System.Windows.Forms.Button();
@@ -139,12 +133,13 @@
             this.textBox_mealChange_kkal = new System.Windows.Forms.TextBox();
             this.textBox_mealChange_type = new System.Windows.Forms.TextBox();
             this.textBox_mealChange_name = new System.Windows.Forms.TextBox();
-            this.eateryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_MealBack = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_auth.SuspendLayout();
             this.panel_browseEatery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Eatery)).BeginInit();
@@ -415,39 +410,13 @@
             this.dataGridView_Meals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mealName,
             this.amount,
-            this.state,
-            this.eateryNameDataGridViewTextBoxColumn1,
-            this.mealNameDataGridViewTextBoxColumn,
-            this.dayDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn});
+            this.state});
             this.dataGridView_Meals.DataSource = this.menuBindingSource;
             this.dataGridView_Meals.Location = new System.Drawing.Point(30, 236);
             this.dataGridView_Meals.Name = "dataGridView_Meals";
             this.dataGridView_Meals.Size = new System.Drawing.Size(509, 211);
             this.dataGridView_Meals.TabIndex = 9;
             this.dataGridView_Meals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoadMealClick);
-            // 
-            // mealName
-            // 
-            this.mealName.DataPropertyName = "mealName";
-            this.mealName.HeaderText = "Название";
-            this.mealName.Name = "mealName";
-            this.mealName.Width = 200;
-            // 
-            // amount
-            // 
-            this.amount.DataPropertyName = "amount";
-            this.amount.HeaderText = "Количество";
-            this.amount.Name = "amount";
-            this.amount.Width = 110;
-            // 
-            // state
-            // 
-            this.state.DataPropertyName = "state";
-            this.state.HeaderText = "Состояние";
-            this.state.Name = "state";
-            this.state.Width = 150;
             // 
             // menuBindingSource
             // 
@@ -613,34 +582,10 @@
             this.dataGridView_choosenMeals.DataSource = this.mealbindingSource;
             this.dataGridView_choosenMeals.Location = new System.Drawing.Point(52, 127);
             this.dataGridView_choosenMeals.Name = "dataGridView_choosenMeals";
-            this.dataGridView_choosenMeals.Size = new System.Drawing.Size(448, 218);
+            this.dataGridView_choosenMeals.Size = new System.Drawing.Size(606, 218);
             this.dataGridView_choosenMeals.TabIndex = 9;
             this.dataGridView_choosenMeals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_choosenMeals_CellClick);
             this.dataGridView_choosenMeals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteFromChoosen);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "mealName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Название";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "mealType";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Тип";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "kkal";
-            this.dataGridViewTextBoxColumn7.HeaderText = "kkal";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "cost";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Цена";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // mealbindingSource
             // 
@@ -1033,6 +978,16 @@
             this.panel_mealInfo.Size = new System.Drawing.Size(700, 500);
             this.panel_mealInfo.TabIndex = 25;
             // 
+            // button_MealBack
+            // 
+            this.button_MealBack.Location = new System.Drawing.Point(42, 26);
+            this.button_MealBack.Name = "button_MealBack";
+            this.button_MealBack.Size = new System.Drawing.Size(93, 29);
+            this.button_MealBack.TabIndex = 27;
+            this.button_MealBack.Text = "Назад";
+            this.button_MealBack.UseVisualStyleBackColor = true;
+            this.button_MealBack.Click += new System.EventHandler(this.button_MealBack_Click);
+            // 
             // button_saveMealEdit
             // 
             this.button_saveMealEdit.Location = new System.Drawing.Point(506, 199);
@@ -1221,45 +1176,51 @@
             this.textBox_mealChange_name.TabIndex = 22;
             this.textBox_mealChange_name.Text = "name";
             // 
-            // eateryNameDataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn5
             // 
-            this.eateryNameDataGridViewTextBoxColumn1.DataPropertyName = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn1.HeaderText = "eateryName";
-            this.eateryNameDataGridViewTextBoxColumn1.Name = "eateryNameDataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "mealName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 250;
             // 
-            // mealNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.mealNameDataGridViewTextBoxColumn.DataPropertyName = "mealName";
-            this.mealNameDataGridViewTextBoxColumn.HeaderText = "mealName";
-            this.mealNameDataGridViewTextBoxColumn.Name = "mealNameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "mealType";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Тип";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dayDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "kkal";
+            this.dataGridViewTextBoxColumn7.HeaderText = "kkal";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // amountDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "cost";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // stateDataGridViewTextBoxColumn
+            // mealName
             // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.mealName.DataPropertyName = "mealName";
+            this.mealName.HeaderText = "Название";
+            this.mealName.Name = "mealName";
+            this.mealName.Width = 200;
             // 
-            // button_MealBack
+            // amount
             // 
-            this.button_MealBack.Location = new System.Drawing.Point(42, 26);
-            this.button_MealBack.Name = "button_MealBack";
-            this.button_MealBack.Size = new System.Drawing.Size(93, 29);
-            this.button_MealBack.TabIndex = 27;
-            this.button_MealBack.Text = "Назад";
-            this.button_MealBack.UseVisualStyleBackColor = true;
-            this.button_MealBack.Click += new System.EventHandler(this.button_MealBack_Click);
+            this.amount.DataPropertyName = "amount";
+            this.amount.HeaderText = "Количество";
+            this.amount.Name = "amount";
+            this.amount.Width = 110;
+            // 
+            // state
+            // 
+            this.state.DataPropertyName = "state";
+            this.state.HeaderText = "Состояние";
+            this.state.Name = "state";
+            this.state.Width = 150;
             // 
             // Form1
             // 
@@ -1268,13 +1229,13 @@
             this.ClientSize = new System.Drawing.Size(950, 534);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel_menu_auth);
-            this.Controls.Add(this.panel_mealInfo);
-            this.Controls.Add(this.panel_choosenMeals);
             this.Controls.Add(this.panel_browseEateryMenu);
             this.Controls.Add(this.panel_browseEatery);
             this.Controls.Add(this.panel_newUser);
             this.Controls.Add(this.panel_auth);
             this.Controls.Add(this.panel_admin);
+            this.Controls.Add(this.panel_mealInfo);
+            this.Controls.Add(this.panel_choosenMeals);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_auth.ResumeLayout(false);
@@ -1402,10 +1363,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button button_meal_deleteChoosen;
         private System.Windows.Forms.Button button_meal_addChoosen;
         private System.Windows.Forms.Label label3;
@@ -1420,16 +1377,15 @@
         private System.Windows.Forms.TextBox textBox_mealChange_type;
         private System.Windows.Forms.TextBox textBox_mealChange_name;
         private System.Windows.Forms.Panel panel_meal_dataInfo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_MealBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn mealName;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eateryNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button_MealBack;
     }
 }
 
